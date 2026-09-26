@@ -26,93 +26,87 @@
 
     <nav>
 
-        <div class="nav-right">
+        <!-- Logo + University information -->
 
-            <ul>
-
-                <li>
-                    <a href="#home">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#projects">
-                        Projects
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="https://github.com/thuletb/programming-for-data-analysis"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-                </li>
-
-            </ul>
-
-
-            <!-- BK LOGO -->
+        <div class="brand">
 
             <img
-                class="nav-logo"
                 src="Images/bk-logo.png"
                 alt="HCMUT Logo"
             >
 
+            <div class="brand-text">
+
+                <div class="brand-university">
+                    Ho Chi Minh City University of Technology – VNU-HCM
+                </div>
+
+                <div class="brand-faculty">
+                    Faculty of Computer Science and Engineering
+                </div>
+
+            </div>
+
         </div>
+
+
+        <!-- Navigation links -->
+
+        <ul>
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://github.com/thuletb/programming-for-data-analysis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+            </li>
+
+        </ul>
 
     </nav>
 
 
 
-    <!-- ================= MAIN CONTENT ================= -->
+    <!-- ================= MAIN HERO ================= -->
 
     <div class="hero-content">
 
 
         <!-- =================================================
-             LEFT COLUMN
-        ================================================== -->
+             LEFT SIDE
+        ================================================= -->
 
         <div class="hero-text">
-
-
-            <!-- UNIVERSITY -->
-
-            <div class="university-info">
-
-                <p class="university-name">
-                    Ho Chi Minh City University of Technology – VNU-HCM
-                </p>
-
-                <p class="faculty-name">
-                    Faculty of Computer Science and Engineering
-                </p>
-
-            </div>
-
-
-            <!-- COURSE LABEL -->
 
             <p class="tag">
                 COURSE ASSIGNMENT · SEMESTER 261
             </p>
 
 
-            <!-- COURSE TITLE -->
-
             <h1>
-                Programming Foundation for<br>
+                Programming<br>
+                Foundation for<br>
                 Data Analysis and<br>
                 Visualization
             </h1>
 
 
-            <!-- COURSE INFORMATION -->
+            <!-- Course information -->
 
             <div class="course-details">
 
@@ -128,7 +122,7 @@
             </div>
 
 
-            <!-- STUDENT INFORMATION -->
+            <!-- Student information -->
 
             <div class="student-details">
 
@@ -150,10 +144,10 @@
             </div>
 
 
-            <!-- REPOSITORY -->
+            <!-- GitHub button -->
 
             <a
-                class="btn"
+                class="github-button"
                 href="https://github.com/thuletb/programming-for-data-analysis"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -166,19 +160,17 @@
 
 
         <!-- =================================================
-             RIGHT COLUMN - PROJECTS
-        ================================================== -->
+             RIGHT SIDE - PROJECTS
+        ================================================= -->
 
-        <div class="hero-projects" id="projects">
+        <div class="projects-area" id="projects">
 
-
-            <!-- PROJECT HEADING -->
 
             <div class="projects-heading">
 
-                <p class="projects-label">
+                <span>
                     MY WORK
-                </p>
+                </span>
 
                 <h2>
                     Course Assignment
@@ -188,43 +180,49 @@
 
 
 
-            <!-- ================= PROJECT GRID ================= -->
+            <!-- PROJECT GRID -->
 
-            <div class="hero-project-grid">
-
-
-                <!-- =============================================
-                     PROJECT 01
-                ============================================== -->
-
-                <div class="hero-project-card">
-
-                    <span class="project-number">
-                        PROJECT 01 · TABULAR
-                    </span>
+            <div class="project-grid">
 
 
-                    <h3>
-                        Stroke Risk Prediction
-                    </h3>
+                <!-- ================= PROJECT 01 ================= -->
+
+                <div class="project-card">
+
+                    <div class="project-content">
+
+                        <span class="project-number">
+                            PROJECT 01 · TABULAR
+                        </span>
 
 
-                    <p>
-                        Predicting stroke risk from demographic,
-                        lifestyle, and health-related data using
-                        machine learning.
-                    </p>
+                        <h3>
+                            Stroke Risk Prediction
+                        </h3>
 
+
+                        <p>
+                            Predicting stroke risk from demographic,
+                            lifestyle, and health-related data using
+                            machine learning.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Project links -->
 
                     <div class="project-actions">
 
                         <a
-                            class="hero-project-link"
+                            class="project-link"
                             href="tabular.html"
                         >
                             Explore Project →
                         </a>
 
+
+                        <!-- Replace this URL with your dataset URL if needed -->
 
                         <a
                             class="dataset-link"
@@ -241,38 +239,40 @@
 
 
 
-                <!-- =============================================
-                     PROJECT 02
-                ============================================== -->
+                <!-- ================= PROJECT 02 ================= -->
 
-                <div class="hero-project-card">
+                <div class="project-card">
 
-                    <span class="project-number">
-                        PROJECT 02 · TIME SERIES
-                    </span>
+                    <div class="project-content">
 
-
-                    <h3>
-                        Household Energy Consumption Forecasting
-                    </h3>
+                        <span class="project-number">
+                            PROJECT 02 · TIME SERIES
+                        </span>
 
 
-                    <p>
-                        Time-series analysis and machine learning
-                        for forecasting household electricity
-                        consumption using historical power usage
-                        data.
-                    </p>
+                        <h3>
+                            Household Energy<br>
+                            Consumption Forecasting
+                        </h3>
 
+
+                        <p>
+                            Time-series analysis and machine learning
+                            for forecasting household electricity
+                            consumption using historical power usage
+                            data.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Project links -->
 
                     <div class="project-actions">
 
-                        <a
-                            class="hero-project-link"
-                            href="timeseries.html"
-                        >
+                        <span class="project-link disabled">
                             Explore Project →
-                        </a>
+                        </span>
 
 
                         <a
@@ -305,13 +305,7 @@
 
 <footer>
 
-    <p>
-        © 2026 Programming Foundation for Data Analysis and Visualization
-    </p>
-
-    <p class="footer-subtitle">
-        Ho Chi Minh City University of Technology – VNU-HCM
-    </p>
+    © 2026 Programming Foundation for Data Analysis and Visualization
 
 </footer>
 
