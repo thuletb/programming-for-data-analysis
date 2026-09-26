@@ -12,62 +12,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <header class="hero" id="home">
-
 
     <!-- ================= NAVIGATION ================= -->
 
     <nav>
 
-        <!-- Logo + University Information -->
-
         <div class="brand">
 
-            <img src="Images/bk-logo.png"
-                 alt="HCMUT Logo">
+            <img
+                src="Images/bk-logo.png"
+                alt="HCMUT Logo"
+            >
 
             <div class="brand-text">
 
-                <div class="university">
+                <strong>
                     Ho Chi Minh City University of Technology – VNU-HCM
-                </div>
+                </strong>
 
-                <div class="faculty">
+                <span>
                     Faculty of Computer Science and Engineering
-                </div>
+                </span>
 
             </div>
 
         </div>
 
 
-        <!-- Navigation Links -->
-
         <ul>
 
             <li>
-                <a href="#home">
-                    Home
-                </a>
+                <a href="#home">Home</a>
             </li>
 
             <li>
-                <a href="#projects">
-                    Projects
-                </a>
+                <a href="#projects">Projects</a>
             </li>
 
             <li>
-                <a href="https://github.com/thuletb/programming-for-data-analysis"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://github.com/thuletb/programming-for-data-analysis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     GitHub
                 </a>
             </li>
@@ -82,9 +72,7 @@
     <div class="hero-content">
 
 
-        <!-- =================================================
-             LEFT COLUMN
-        ================================================= -->
+        <!-- ========== LEFT SIDE ========== -->
 
         <div class="hero-text">
 
@@ -100,8 +88,6 @@
             </h1>
 
 
-            <!-- Course Information -->
-
             <div class="course-details">
 
                 <p>
@@ -116,13 +102,10 @@
             </div>
 
 
-            <!-- Student Information -->
-
             <div class="student-details">
 
                 <p>
-                    <strong>Group:</strong>
-                    G10
+                    <strong>Group:</strong> G10
                 </p>
 
                 <p>
@@ -133,30 +116,21 @@
             </div>
 
 
-            <!-- GitHub Repository Button -->
-
-            <a class="btn"
-               href="https://github.com/thuletb/programming-for-data-analysis"
-               target="_blank"
-               rel="noopener noreferrer">
-
+            <a
+                class="github-btn"
+                href="https://github.com/thuletb/programming-for-data-analysis"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 View GitHub Repository
-
             </a>
 
         </div>
 
 
+        <!-- ========== RIGHT SIDE ========== -->
 
-        <!-- =================================================
-             RIGHT COLUMN - PROJECTS
-        ================================================= -->
-
-        <div class="projects-area"
-             id="projects">
-
-
-            <!-- Project Heading -->
+        <section class="projects" id="projects">
 
             <div class="projects-heading">
 
@@ -171,15 +145,10 @@
             </div>
 
 
-
-            <!-- ================= PROJECT GRID ================= -->
-
             <div class="project-grid">
 
 
-                <!-- =============================================
-                     PROJECT 01
-                ============================================== -->
+                <!-- ================= PROJECT 01 ================= -->
 
                 <div class="project-card">
 
@@ -200,27 +169,24 @@
                     </p>
 
 
-                    <div class="project-actions">
+                    <div class="card-links">
 
-                        <!-- Project Page -->
-
-                        <a class="project-link"
-                           href="tabular.html">
-
+                        <a
+                            class="project-link"
+                            href="tabular.html"
+                        >
                             Explore Project →
-
                         </a>
 
 
-                        <!-- Dataset -->
-
-                        <a class="dataset-link"
-                           href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
+                        <!-- Replace with your actual dataset URL -->
+                        <a
+                            class="dataset-link"
+                            href="YOUR-STROKE-DATASET-LINK"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Dataset ↗
-
                         </a>
 
                     </div>
@@ -228,10 +194,7 @@
                 </div>
 
 
-
-                <!-- =============================================
-                     PROJECT 02
-                ============================================== -->
+                <!-- ================= PROJECT 02 ================= -->
 
                 <div class="project-card">
 
@@ -241,65 +204,45 @@
 
 
                     <h3>
-                        Household Energy
-                        Consumption
-                        Forecasting
+                        Household Energy Consumption Forecasting
                     </h3>
 
 
                     <p>
                         Time-series analysis and machine learning
                         for forecasting household electricity
-                        consumption using historical power
-                        usage data.
+                        consumption using historical power usage data.
                     </p>
 
 
-                    <div class="project-actions">
-
-                        <!-- Project not available yet -->
+                    <div class="card-links">
 
                         <span class="project-link disabled">
                             Coming Soon
                         </span>
 
 
-                        <!-- Dataset -->
-
-                        <a class="dataset-link"
-                           href="https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
+                        <!-- Replace with your actual dataset URL -->
+                        <a
+                            class="dataset-link"
+                            href="YOUR-HOUSEHOLD-ENERGY-DATASET-LINK"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Dataset ↗
-
                         </a>
 
                     </div>
 
                 </div>
 
-
             </div>
 
-        </div>
+        </section>
 
     </div>
 
 </header>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    © 2026 Programming Foundation for Data Analysis and Visualization
-
-</footer>
-
 
 </body>
 
