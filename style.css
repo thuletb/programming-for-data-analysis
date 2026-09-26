@@ -46,47 +46,29 @@ nav {
     max-width: 1550px;
 
     margin: 0 auto;
-    padding: 18px 55px;
+
+    padding: 15px 55px;
 
     display: flex;
-    justify-content: space-between;
+
+    justify-content: flex-end;
     align-items: center;
 }
 
 
-/* =========================================================
-   BRAND / LOGO
-========================================================= */
+/* Right side navigation */
 
-.brand {
+.nav-right {
+    margin-left: auto;
+
     display: flex;
     align-items: center;
 
-    gap: 20px;
-
-    font-size: 20px;
-    font-weight: 700;
-
-    letter-spacing: 0.5px;
-}
-
-.brand img {
-    width: 100px;
-    height: 100px;
-
-    object-fit: contain;
-
-    flex-shrink: 0;
-}
-
-.brand span {
-    color: white;
+    gap: 32px;
 }
 
 
-/* =========================================================
-   NAVIGATION LINKS
-========================================================= */
+/* Navigation links */
 
 nav ul {
     display: flex;
@@ -107,12 +89,26 @@ nav a {
     font-weight: 500;
 
     transition:
-        opacity 0.2s,
-        color 0.2s;
+        opacity 0.2s ease,
+        color 0.2s ease;
 }
 
 nav a:hover {
     opacity: 0.75;
+}
+
+
+/* =========================================================
+   BK LOGO
+========================================================= */
+
+.nav-logo {
+    width: 95px;
+    height: 95px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
 
 
@@ -126,7 +122,7 @@ nav a:hover {
 
     margin: 0 auto;
 
-    padding: 45px 55px 90px;
+    padding: 35px 55px 90px;
 
     display: flex;
 
@@ -138,18 +134,47 @@ nav a:hover {
 
 
 /* =========================================================
-   LEFT SIDE
+   LEFT COLUMN
 ========================================================= */
 
 .hero-text {
-    width: 42%;
+    width: 43%;
 
     flex-shrink: 0;
 }
 
 
 /* =========================================================
-   SMALL LABEL
+   UNIVERSITY INFORMATION
+========================================================= */
+
+.university-info {
+    margin-bottom: 32px;
+}
+
+.university-name {
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    margin-bottom: 4px;
+}
+
+.faculty-name {
+    color: #dbeafe;
+
+    font-size: 16px;
+    font-weight: 400;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   COURSE LABEL
 ========================================================= */
 
 .tag {
@@ -165,7 +190,7 @@ nav a:hover {
 
 
 /* =========================================================
-   MAIN TITLE
+   COURSE TITLE
 ========================================================= */
 
 .hero h1 {
@@ -183,7 +208,7 @@ nav a:hover {
 
 
 /* =========================================================
-   COURSE INFORMATION
+   COURSE DETAILS
 ========================================================= */
 
 .course-details {
@@ -193,7 +218,7 @@ nav a:hover {
 
     line-height: 1.8;
 
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .course-details p {
@@ -206,7 +231,7 @@ nav a:hover {
 
 
 /* =========================================================
-   STUDENT INFORMATION
+   STUDENT DETAILS
 ========================================================= */
 
 .student-details {
@@ -224,7 +249,7 @@ nav a:hover {
 }
 
 .student-details p {
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
 .student-details strong {
@@ -274,16 +299,16 @@ nav a:hover {
 
 
 /* =========================================================
-   RIGHT SIDE — PROJECTS
+   RIGHT COLUMN - PROJECTS
 ========================================================= */
 
 .hero-projects {
-    width: 54%;
+    width: 53%;
 }
 
 
 /* =========================================================
-   PROJECT SECTION HEADING
+   PROJECT HEADING
 ========================================================= */
 
 .projects-heading {
@@ -359,9 +384,7 @@ nav a:hover {
 }
 
 
-/* =========================================================
-   PROJECT CARD HOVER
-========================================================= */
+/* Card hover */
 
 .hero-project-card:hover {
     transform: translateY(-7px);
@@ -377,7 +400,7 @@ nav a:hover {
 
 
 /* =========================================================
-   PROJECT NUMBER / TYPE
+   PROJECT NUMBER
 ========================================================= */
 
 .project-number {
@@ -422,12 +445,12 @@ nav a:hover {
 
 
 /* =========================================================
-   PROJECT ACTIONS
+   PROJECT LINKS
 ========================================================= */
 
 .project-actions {
     /*
-       Push links to bottom of card
+       Push links to bottom of the card
     */
 
     margin-top: auto;
@@ -444,14 +467,9 @@ nav a:hover {
 }
 
 
-/* =========================================================
-   EXPLORE PROJECT
-========================================================= */
+/* Explore Project */
 
-.project-actions .hero-project-link {
-    margin: 0;
-    padding: 0;
-
+.hero-project-link {
     display: inline-block;
 
     color: #7dd3fc;
@@ -468,25 +486,21 @@ nav a:hover {
         transform 0.2s ease;
 }
 
-.project-actions .hero-project-link:hover {
+.hero-project-link:hover {
     color: white;
 
     transform: translateX(3px);
 }
 
 
-/* =========================================================
-   DATASET
-========================================================= */
+/* Dataset */
 
 .dataset-link {
     /*
-       THIS pushes Dataset to the right edge
+       Push Dataset to the right side
     */
 
     margin-left: auto;
-
-    padding: 0;
 
     display: inline-block;
 
@@ -498,10 +512,6 @@ nav a:hover {
     text-decoration: none;
 
     white-space: nowrap;
-
-    border: none;
-
-    background: transparent;
 
     transition:
         color 0.2s ease,
@@ -512,19 +522,6 @@ nav a:hover {
     color: #7dd3fc;
 
     transform: translateX(3px);
-}
-
-
-/* =========================================================
-   FALLBACK PROJECT LINK
-========================================================= */
-
-.hero-project-link {
-    color: #7dd3fc;
-
-    font-weight: 700;
-
-    text-decoration: none;
 }
 
 
@@ -556,7 +553,7 @@ footer {
 
 
 /* =========================================================
-   LARGE TABLET / SMALL LAPTOP
+   SMALL LAPTOP
 ========================================================= */
 
 @media (max-width: 1200px) {
@@ -566,17 +563,9 @@ footer {
         padding-right: 30px;
     }
 
-    .brand img {
+    .nav-logo {
         width: 85px;
         height: 85px;
-    }
-
-    .brand {
-        gap: 14px;
-    }
-
-    .brand span {
-        font-size: 16px;
     }
 
     .hero-content {
@@ -587,15 +576,23 @@ footer {
     }
 
     .hero-text {
-        width: 42%;
+        width: 43%;
     }
 
     .hero-projects {
-        width: 55%;
+        width: 54%;
     }
 
     .hero h1 {
         font-size: 46px;
+    }
+
+    .university-name {
+        font-size: 16px;
+    }
+
+    .faculty-name {
+        font-size: 14px;
     }
 
     .hero-project-card {
@@ -606,7 +603,7 @@ footer {
         font-size: 21px;
     }
 
-    .project-actions .hero-project-link,
+    .hero-project-link,
     .dataset-link {
         font-size: 13px;
     }
@@ -620,16 +617,12 @@ footer {
 @media (max-width: 950px) {
 
     nav {
-        padding: 18px 25px;
+        padding: 15px 25px;
     }
 
-    .brand img {
+    .nav-logo {
         width: 75px;
         height: 75px;
-    }
-
-    .brand span {
-        font-size: 14px;
     }
 
     nav ul {
@@ -642,7 +635,7 @@ footer {
         align-items: stretch;
 
         padding:
-            45px
+            35px
             40px
             80px;
 
@@ -662,7 +655,8 @@ footer {
     }
 
     .hero-project-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
 
         gap: 22px;
     }
@@ -687,28 +681,28 @@ footer {
     /* Navigation */
 
     nav {
-        padding: 15px 20px;
+        padding: 12px 20px;
     }
 
-    .brand img {
+    .nav-right {
+        width: 100%;
+
+        justify-content: flex-end;
+
+        gap: 20px;
+    }
+
+    .nav-logo {
         width: 65px;
         height: 65px;
     }
 
-    .brand {
-        gap: 10px;
-    }
-
-    .brand span {
-        max-width: 250px;
-
-        font-size: 12px;
-
-        line-height: 1.3;
-    }
-
     nav ul {
-        display: none;
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
     }
 
 
@@ -716,11 +710,23 @@ footer {
 
     .hero-content {
         padding:
-            35px
+            30px
             22px
             65px;
 
         gap: 60px;
+    }
+
+    .university-info {
+        margin-bottom: 28px;
+    }
+
+    .university-name {
+        font-size: 16px;
+    }
+
+    .faculty-name {
+        font-size: 14px;
     }
 
     .tag {
@@ -759,7 +765,7 @@ footer {
         font-size: 24px;
     }
 
-    .project-actions .hero-project-link,
+    .hero-project-link,
     .dataset-link {
         font-size: 14px;
     }
@@ -773,25 +779,39 @@ footer {
 @media (max-width: 480px) {
 
     nav {
-        padding:
-            12px
-            16px;
+        padding: 10px 16px;
     }
 
-    .brand img {
-        width: 58px;
-        height: 58px;
+    nav ul {
+        gap: 13px;
     }
 
-    .brand span {
-        font-size: 11px;
+    nav a {
+        font-size: 12px;
+    }
+
+    .nav-right {
+        gap: 14px;
+    }
+
+    .nav-logo {
+        width: 55px;
+        height: 55px;
     }
 
     .hero-content {
         padding:
-            30px
+            25px
             18px
             55px;
+    }
+
+    .university-name {
+        font-size: 15px;
+    }
+
+    .faculty-name {
+        font-size: 13px;
     }
 
     .hero h1 {
@@ -801,16 +821,14 @@ footer {
     .hero-project-card {
         min-height: 300px;
 
-        padding:
-            25px
-            22px;
+        padding: 25px 22px;
     }
 
     .hero-project-card h3 {
         font-size: 22px;
     }
 
-    .project-actions .hero-project-link,
+    .hero-project-link,
     .dataset-link {
         font-size: 13px;
     }
@@ -818,13 +836,22 @@ footer {
 
 
 /* =========================================================
-   VERY SMALL SCREEN
+   VERY SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 360px) {
 
-    .brand span {
-        display: none;
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .nav-logo {
+        width: 48px;
+        height: 48px;
     }
 
     .project-actions {
@@ -835,7 +862,7 @@ footer {
         margin-left: auto;
     }
 
-    .project-actions .hero-project-link,
+    .hero-project-link,
     .dataset-link {
         font-size: 12px;
     }
