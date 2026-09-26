@@ -7,38 +7,72 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Programming for Data Analysis</title>
+    <title>Programming for Data Analysis & Visualization</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-<!-- ================= HERO ================= -->
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <header class="hero" id="home">
 
+    <!-- NAVIGATION -->
     <nav>
+
         <div class="brand">
-            <img src="Images/bk-logo.png" alt="HCMUT Logo">
-            <span>Ho Chi Minh City University of Technology – VNU-HCM</span>
+
+            <img
+                src="Images/bk-logo.png"
+                alt="HCMUT Logo"
+            >
+
+            <span>
+                Ho Chi Minh City University of Technology – VNU-HCM
+            </span>
+
         </div>
 
+
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
 
             <li>
-                <a href="https://github.com/thuletb/programming-for-data-analysis"
-                   target="_blank">
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#projects">
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="https://github.com/thuletb/programming-for-data-analysis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     GitHub
                 </a>
             </li>
+
         </ul>
+
     </nav>
 
 
+    <!-- HERO CONTENT -->
+
     <div class="hero-content">
+
+
+        <!-- ================= LEFT SIDE ================= -->
 
         <div class="hero-text">
 
@@ -46,11 +80,15 @@
                 COURSE ASSIGNMENT · SEMESTER 261
             </p>
 
+
             <h1>
                 Programming for<br>
                 Data Analysis &<br>
                 Visualization
             </h1>
+
+
+            <!-- COURSE INFORMATION -->
 
             <div class="course-details">
 
@@ -63,206 +101,157 @@
                 </p>
 
                 <p>
-                    Semester 261 
+                    Semester 261
                 </p>
 
                 <p>
                     Instructor:
-                    <strong>Le Thanh Sach</strong>
+                    <strong>
+                        Le Thanh Sach
+                    </strong>
                 </p>
 
             </div>
 
+
+            <!-- STUDENT INFORMATION -->
 
             <div class="student-details">
 
                 <p>
-                    <strong>Student:</strong> YOUR NAME
+                    <strong>Student:</strong>
+                    LE THI BAO THU
                 </p>
 
                 <p>
-                    <strong>Student ID:</strong> YOUR STUDENT ID
+                    <strong>Student ID:</strong>
+                    2680021
                 </p>
 
             </div>
 
 
-            <a class="btn" href="#projects">
-                Explore Projects
+            <a
+                class="btn"
+                href="https://github.com/thuletb/programming-for-data-analysis"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View GitHub Repository
             </a>
 
         </div>
 
 
-        <!-- <div class="hero-logo">
+        <!-- ================= RIGHT SIDE ================= -->
 
-            <img
-                src="images/bk-logo.png"
-                alt="Ho Chi Minh City University of Technology Logo"
-            >
+        <div class="hero-projects" id="projects">
 
-        </div> -->
+
+            <div class="projects-heading">
+
+                <p class="projects-label">
+                    MY WORK
+                </p>
+
+                <h2>
+                    Course Projects
+                </h2>
+
+            </div>
+
+
+            <div class="hero-project-grid">
+
+
+                <!-- PROJECT 01 -->
+
+                <div class="hero-project-card">
+
+                    <span class="project-number">
+                        PROJECT 01
+                    </span>
+
+
+                    <h3>
+                        Tabular Data Analysis
+                    </h3>
+
+
+                    <p>
+                        Exploratory data analysis,
+                        data preprocessing,
+                        visualization and machine learning
+                        on structured tabular data.
+                    </p>
+
+
+                    <a
+                        class="hero-project-link"
+                        href="tabular.html"
+                    >
+                        Explore Project →
+                    </a>
+
+                </div>
+
+
+
+                <!-- PROJECT 02 -->
+
+                <div class="hero-project-card">
+
+                    <span class="project-number">
+                        PROJECT 02
+                    </span>
+
+
+                    <h3>
+                        Coming Soon
+                    </h3>
+
+
+                    <p>
+                        The second project will explore
+                        another data modality such as
+                        text, image, multimodal data
+                        or time series.
+                    </p>
+
+
+                    <span class="hero-project-link coming-soon">
+                        Coming Soon
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
 
     </div>
 
 </header>
 
 
-<!-- ================= PROJECTS ================= -->
 
-<section class="projects" id="projects">
-
-    <div class="section">
-
-        <div class="section-title">
-
-            <span>MY WORK</span>
-
-            <h2>Course Projects</h2>
-
-        </div>
-
-
-        <div class="project-grid">
-
-            <!-- PROJECT 01 -->
-
-            <div class="project-card">
-
-                <span class="project-number">
-                    PROJECT 01
-                </span>
-
-                <h3>Tabular Data Analysis</h3>
-
-                <p>
-                    Exploratory data analysis, data preprocessing,
-                    visualization and machine learning on
-                    structured tabular data.
-                </p>
-
-                <a class="project-link"
-                   href="tabular.html">
-                    Explore Project →
-                </a>
-
-            </div>
-
-
-            <!-- PROJECT 02 -->
-
-            <div class="project-card">
-
-                <span class="project-number">
-                    PROJECT 02
-                </span>
-
-                <h3>Coming Soon</h3>
-
-                <p>
-                    The second project will explore another
-                    data modality such as text, image,
-                    multimodal data or time series.
-                </p>
-
-                <span class="project-link">
-                    Coming Soon
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= COURSE ================= -->
-
-<!-- <section id="course">
-
-    <div class="section">
-
-        <div class="section-title">
-
-            <span>ABOUT</span>
-
-            <h2>Course Information</h2>
-
-        </div>
-
-
-        <div class="course-info">
-
-            <p>
-                <strong>
-                    Ho Chi Minh City University of Technology
-                    – VNU-HCM
-                </strong>
-            </p>
-
-            <p>
-                Faculty of Computer Science and Engineering
-            </p>
-
-            <p>
-                Programming Foundation for Data Analysis
-                and Visualization
-            </p>
-
-            <p>
-                Instructor:
-                <strong>Le Thanh Sach</strong>
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= STUDENT ================= -->
-
-<section class="student" id="student">
-
-    <div class="section">
-
-        <h2>Student Information</h2>
-
-        <p>
-            LE THI BAO THU
-        </p>
-
-        <p>
-            Student ID: 2680021
-        </p>
-
-        <p>
-            <a href="https://github.com/thuletb">
-                GitHub Profile
-            </a>
-        </p>
-
-        <p>
-            <a href="https://github.com/thuletb/programming-for-data-analysis">
-                Project Repository
-            </a>
-        </p>
-
-    </div>
-
-</section> -->
-
-
-<!-- ================= FOOTER ================= -->
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer>
 
-    © 2026 Programming for Data Analysis & Visualization
+    <p>
+        © 2026 Programming for Data Analysis & Visualization
+    </p>
+
+    <p class="footer-subtitle">
+        Ho Chi Minh City University of Technology – VNU-HCM
+    </p>
 
 </footer>
+
 
 </body>
 
