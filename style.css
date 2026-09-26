@@ -26,13 +26,12 @@ body {
 .hero {
     min-height: 100vh;
 
-    background:
-        linear-gradient(
-            135deg,
-            #061b4f 0%,
-            #0b3b91 55%,
-            #168bd2 100%
-        );
+    background: linear-gradient(
+        135deg,
+        #061b4f 0%,
+        #0b3b91 55%,
+        #168bd2 100%
+    );
 
     color: white;
 }
@@ -44,10 +43,10 @@ body {
 
 nav {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1550px;
 
     margin: 0 auto;
-    padding: 24px 55px;
+    padding: 22px 55px;
 
     display: flex;
     justify-content: space-between;
@@ -61,17 +60,17 @@ nav {
     display: flex;
     align-items: center;
 
-    gap: 14px;
+    gap: 18px;
 
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 700;
 
     letter-spacing: 0.5px;
 }
 
 .brand img {
-    width: 45px;
-    height: 45px;
+    width: 75px;
+    height: 75px;
 
     object-fit: contain;
 }
@@ -84,7 +83,7 @@ nav ul {
 
     list-style: none;
 
-    gap: 38px;
+    gap: 40px;
 }
 
 nav a {
@@ -109,21 +108,18 @@ nav a:hover {
 
 .hero-content {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1550px;
 
     margin: 0 auto;
 
-    padding:
-        65px
-        55px
-        90px;
+    padding: 55px 55px 90px;
 
     display: flex;
 
     align-items: center;
     justify-content: space-between;
 
-    gap: 65px;
+    gap: 90px;
 }
 
 
@@ -132,7 +128,7 @@ nav a:hover {
 ========================================================= */
 
 .hero-text {
-    width: 44%;
+    width: 42%;
     flex-shrink: 0;
 }
 
@@ -154,15 +150,16 @@ nav a:hover {
 /* Main title */
 
 .hero h1 {
+    color: white;
+
     font-size: 54px;
+    font-weight: 700;
 
     line-height: 1.08;
 
     letter-spacing: -1px;
 
     margin-bottom: 36px;
-
-    color: white;
 }
 
 
@@ -209,7 +206,7 @@ nav a:hover {
 
 
 /* =========================================================
-   BUTTON
+   GITHUB BUTTON
 ========================================================= */
 
 .btn {
@@ -217,9 +214,9 @@ nav a:hover {
 
     margin-top: 30px;
 
-    padding: 14px 25px;
+    padding: 14px 26px;
 
-    border-radius: 7px;
+    border-radius: 8px;
 
     background: white;
     color: #0b3b91;
@@ -228,6 +225,10 @@ nav a:hover {
     font-weight: 700;
 
     text-decoration: none;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
 
     transition:
         transform 0.25s,
@@ -241,30 +242,30 @@ nav a:hover {
     background: #eaf6ff;
 
     box-shadow:
-        0 8px 20px
-        rgba(0, 0, 0, 0.15);
+        0 12px 25px
+        rgba(0, 0, 0, 0.18);
 }
 
 
 /* =========================================================
-   RIGHT SIDE — COURSE PROJECTS
+   RIGHT SIDE - PROJECTS
 ========================================================= */
 
 .hero-projects {
-    width: 52%;
+    width: 54%;
 }
 
 
-/* Project heading */
+/* Project section heading */
 
 .projects-heading {
-    margin-bottom: 24px;
+    margin-bottom: 25px;
 }
 
 .projects-label {
     color: #86d5ff;
 
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
 
     letter-spacing: 2.5px;
@@ -275,7 +276,8 @@ nav a:hover {
 .hero-projects h2 {
     color: white;
 
-    font-size: 32px;
+    font-size: 34px;
+    font-weight: 700;
 
     line-height: 1.2;
 }
@@ -288,10 +290,9 @@ nav a:hover {
 .hero-project-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 20px;
+    gap: 22px;
 }
 
 
@@ -300,51 +301,65 @@ nav a:hover {
 ========================================================= */
 
 .hero-project-card {
-    min-height: 315px;
+    min-height: 340px;
 
-    padding: 30px 27px;
+    padding: 32px 28px;
 
     display: flex;
     flex-direction: column;
 
-    background:
-        rgba(255, 255, 255, 0.11);
+    /*
+       Semi-transparent background makes the card
+       visible while keeping the blue theme.
+    */
 
-    border:
-        1px solid
-        rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.14);
 
-    border-radius: 18px;
+    /*
+       Stronger white border
+    */
+
+    border: 2px solid rgba(255, 255, 255, 0.38);
+
+    border-radius: 20px;
+
+    /*
+       Shadow creates floating-card effect
+    */
 
     box-shadow:
-        0 18px 40px
-        rgba(0, 0, 0, 0.12);
+        0 18px 40px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.20);
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     transition:
-        transform 0.25s,
-        background 0.25s,
-        box-shadow 0.25s;
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 
-/* Hover effect */
+/* Card hover */
 
 .hero-project-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
 
-    background:
-        rgba(255, 255, 255, 0.17);
+    background: rgba(255, 255, 255, 0.20);
+
+    border-color: rgba(255, 255, 255, 0.65);
 
     box-shadow:
-        0 22px 45px
-        rgba(0, 0, 0, 0.18);
+        0 25px 50px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.30);
 }
 
 
-/* PROJECT 01 / PROJECT 02 */
+/* =========================================================
+   PROJECT NUMBER
+========================================================= */
 
 .project-number {
     color: #7dd3fc;
@@ -356,23 +371,25 @@ nav a:hover {
 }
 
 
-/* Project title */
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
 
 .hero-project-card h3 {
     color: white;
 
     font-size: 24px;
+    font-weight: 700;
 
     line-height: 1.25;
 
-    margin:
-        18px
-        0
-        16px;
+    margin: 18px 0 16px;
 }
 
 
-/* Project description */
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
 
 .hero-project-card p {
     color: #dbeafe;
@@ -391,9 +408,10 @@ nav a:hover {
     display: inline-block;
 
     margin-top: auto;
-    padding-top: 28px;
 
-    color: white;
+    padding-top: 30px;
+
+    color: #7dd3fc;
 
     font-size: 14px;
     font-weight: 700;
@@ -406,9 +424,9 @@ nav a:hover {
 }
 
 a.hero-project-link:hover {
-    color: #7dd3fc;
+    color: white;
 
-    transform: translateX(4px);
+    transform: translateX(5px);
 }
 
 
@@ -455,9 +473,16 @@ footer {
 @media (max-width: 1100px) {
 
     nav {
-        padding:
-            22px
-            30px;
+        padding: 20px 30px;
+    }
+
+    .brand {
+        gap: 12px;
+    }
+
+    .brand img {
+        width: 60px;
+        height: 60px;
     }
 
     .brand span {
@@ -465,12 +490,9 @@ footer {
     }
 
     .hero-content {
-        padding:
-            50px
-            30px
-            80px;
+        padding: 45px 30px 80px;
 
-        gap: 40px;
+        gap: 45px;
     }
 
     .hero-text {
@@ -485,12 +507,17 @@ footer {
         font-size: 44px;
     }
 
+    /*
+       On smaller screens,
+       project cards are stacked.
+    */
+
     .hero-project-grid {
         grid-template-columns: 1fr;
     }
 
     .hero-project-card {
-        min-height: 230px;
+        min-height: 240px;
     }
 }
 
@@ -506,17 +533,15 @@ footer {
     }
 
 
-    /* Navigation */
+    /* ---------- Navigation ---------- */
 
     nav {
-        padding:
-            20px
-            22px;
+        padding: 18px 22px;
     }
 
     .brand img {
-        width: 38px;
-        height: 38px;
+        width: 55px;
+        height: 55px;
     }
 
     .brand span {
@@ -530,17 +555,14 @@ footer {
     }
 
 
-    /* Hero */
+    /* ---------- Hero ---------- */
 
     .hero-content {
         flex-direction: column;
 
         align-items: stretch;
 
-        padding:
-            45px
-            22px
-            65px;
+        padding: 40px 22px 65px;
 
         gap: 65px;
     }
@@ -556,7 +578,7 @@ footer {
     }
 
 
-    /* Projects */
+    /* ---------- Projects ---------- */
 
     .hero-projects {
         width: 100%;
@@ -569,11 +591,11 @@ footer {
     .hero-project-grid {
         grid-template-columns: 1fr;
 
-        gap: 18px;
+        gap: 20px;
     }
 
     .hero-project-card {
-        min-height: 260px;
+        min-height: 270px;
     }
 }
 
@@ -583,6 +605,30 @@ footer {
 ========================================================= */
 
 @media (max-width: 480px) {
+
+    nav {
+        padding: 15px 18px;
+    }
+
+    .brand img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .brand span {
+        font-size: 11px;
+    }
+
+    .hero-content {
+        padding:
+            35px
+            18px
+            55px;
+    }
+
+    .tag {
+        font-size: 12px;
+    }
 
     .hero h1 {
         font-size: 34px;
@@ -594,6 +640,12 @@ footer {
     }
 
     .hero-project-card {
-        padding: 25px 22px;
+        padding: 26px 23px;
+
+        min-height: 250px;
+    }
+
+    .hero-project-card h3 {
+        font-size: 22px;
     }
 }
