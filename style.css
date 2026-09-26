@@ -14,8 +14,8 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
-    background: #061b4f;
+    background: #071f55;
+    color: white;
 }
 
 
@@ -36,8 +36,7 @@ body {
 
     color: white;
 
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
 }
 
 
@@ -46,18 +45,20 @@ body {
 ========================================================= */
 
 nav {
-    width: 94%;
-    max-width: 1600px;
+    width: min(94%, 1600px);
 
     margin: 0 auto;
 
-    padding: 24px 0;
+    padding:
+        clamp(20px, 2.2vw, 35px)
+        clamp(10px, 1.5vw, 25px);
 
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
-    gap: 40px;
+    gap: 30px;
 }
 
 
@@ -67,17 +68,20 @@ nav {
 
 .brand {
     display: flex;
+
     align-items: center;
 
-    gap: 20px;
+    gap: clamp(18px, 1.5vw, 28px);
+
+    min-width: 0;
 }
 
 
 /* BK LOGO */
 
 .brand img {
-    width: clamp(72px, 5vw, 92px);
-    height: clamp(72px, 5vw, 92px);
+    width: clamp(70px, 5.5vw, 105px);
+    height: clamp(70px, 5.5vw, 105px);
 
     object-fit: contain;
 
@@ -85,7 +89,7 @@ nav {
 }
 
 
-/* SCHOOL INFORMATION */
+/* UNIVERSITY + FACULTY */
 
 .brand-text {
     display: flex;
@@ -93,36 +97,46 @@ nav {
 
     gap: 6px;
 
-    line-height: 1.25;
+    min-width: 0;
 }
 
-.university {
-    font-size: clamp(17px, 1.35vw, 23px);
-    font-weight: 700;
+
+.brand-text strong {
+    font-size: clamp(16px, 1.25vw, 24px);
+
+    line-height: 1.2;
+
+    white-space: nowrap;
 }
 
-.faculty {
-    font-size: clamp(14px, 1.05vw, 18px);
-    font-weight: 400;
 
-    color: #e4efff;
+.brand-text span {
+    font-size: clamp(13px, 1vw, 18px);
+
+    color: #e2efff;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
 }
 
 
 /* =========================================================
-   NAV LINKS
+   NAVIGATION LINKS
 ========================================================= */
 
 nav ul {
     display: flex;
+
     align-items: center;
 
     list-style: none;
 
-    gap: clamp(25px, 3vw, 45px);
+    gap: clamp(25px, 3vw, 55px);
 
     flex-shrink: 0;
 }
+
 
 nav a {
     color: white;
@@ -134,56 +148,64 @@ nav a {
     transition: opacity 0.2s ease;
 }
 
+
 nav a:hover {
-    opacity: 0.7;
+    opacity: 0.72;
 }
 
 
 /* =========================================================
-   MAIN CONTENT
+   HERO MAIN LAYOUT
 ========================================================= */
 
 .hero-content {
-    width: 94%;
-    max-width: 1600px;
+    width: min(96%, 1660px);
 
-    margin: auto;
+    margin: 0 auto;
 
-    padding: 50px 0 80px;
+    padding:
+        clamp(70px, 8vh, 120px)
+        clamp(10px, 1.5vw, 25px)
+        clamp(60px, 7vh, 100px);
 
-    display: flex;
+    display: grid;
+
+    /*
+       Keep left side approximately 50%.
+       Right side approximately 50%.
+    */
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: clamp(45px, 5vw, 90px);
 
     align-items: center;
-
-    justify-content: space-between;
-
-    gap: clamp(40px, 4vw, 70px);
 }
 
 
 /* =========================================================
-   LEFT SIDE - 50%
+   LEFT SIDE
 ========================================================= */
 
 .hero-text {
-    width: 50%;
-
     min-width: 0;
 }
 
 
-/* COURSE ASSIGNMENT */
+/* COURSE ASSIGNMENT LABEL */
 
 .tag {
-    color: #82d5ff;
+    color: #8edcff;
 
-    font-size: clamp(13px, 1vw, 16px);
+    font-size: clamp(13px, 1vw, 17px);
 
     font-weight: 700;
 
-    letter-spacing: 2.5px;
+    letter-spacing: 3px;
 
-    margin-bottom: 30px;
+    margin-bottom: clamp(28px, 3vw, 45px);
 }
 
 
@@ -193,21 +215,20 @@ nav a:hover {
 
 .hero h1 {
     /*
-       Smaller than previous version.
-       HTML <br> controls exactly 3 lines.
+       Smaller than the previous version so that
+       "Programming Foundation for" stays on one line
+       on normal desktop screens.
     */
 
-    font-size: clamp(42px, 3.3vw, 56px);
+    font-size: clamp(38px, 3.4vw, 58px);
 
-    line-height: 1.08;
-
-    font-weight: 700;
+    line-height: 1.13;
 
     letter-spacing: -1px;
 
-    margin-bottom: clamp(45px, 5vh, 65px);
+    margin-bottom: clamp(45px, 5vw, 70px);
 
-    white-space: nowrap;
+    font-weight: 700;
 }
 
 
@@ -216,18 +237,20 @@ nav a:hover {
 ========================================================= */
 
 .course-details {
-    color: #e3efff;
+    color: #edf6ff;
 
-    font-size: clamp(15px, 1vw, 18px);
+    font-size: clamp(14px, 1vw, 17px);
 
-    line-height: 1.75;
+    line-height: 1.7;
 
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
+
 
 .course-details p {
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
+
 
 .course-details strong {
     color: white;
@@ -239,22 +262,24 @@ nav a:hover {
 ========================================================= */
 
 .student-details {
-    margin-top: 22px;
+    border-left: 4px solid #4cc7ff;
 
-    border-left: 4px solid #48c4ff;
+    padding-left: clamp(18px, 1.5vw, 26px);
 
-    padding-left: 20px;
+    margin-top: 25px;
 
     color: #edf7ff;
 
-    font-size: clamp(15px, 1vw, 18px);
+    font-size: clamp(14px, 1vw, 17px);
 
-    line-height: 1.8;
+    line-height: 1.7;
 }
+
 
 .student-details p {
     margin: 2px 0;
 }
+
 
 .student-details strong {
     color: white;
@@ -262,90 +287,109 @@ nav a:hover {
 
 
 /* =========================================================
-   GITHUB REPOSITORY BUTTON
+   GITHUB BUTTON
 ========================================================= */
 
-.github-btn {
+a.github-btn {
     display: inline-flex;
 
     align-items: center;
     justify-content: center;
 
-    margin-top: 28px;
+    margin-top: 30px;
 
-    padding: 14px 28px;
+    padding:
+        clamp(12px, 1vw, 15px)
+        clamp(22px, 2vw, 32px);
 
     background: white;
 
-    color: #0b3b91 !important;
+    color: #0b3b91;
 
     border-radius: 8px;
 
-    text-decoration: none !important;
-
-    font-size: 16px;
-
-    font-weight: 700;
-
-    box-shadow:
-        0 8px 20px
-        rgba(0, 0, 0, 0.12);
-
-    transition:
-        transform 0.2s ease,
-        background 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.github-btn:hover {
-    background: #eaf7ff;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 12px 25px
-        rgba(0, 0, 0, 0.18);
-
-    opacity: 1;
-}
-
-
-/* =========================================================
-   RIGHT SIDE - 50%
-========================================================= */
-
-.projects-area {
-    width: 50%;
-
-    min-width: 0;
-}
-
-
-/* MY WORK */
-
-.projects-label {
-    color: #82d5ff;
+    text-decoration: none;
 
     font-size: clamp(13px, 1vw, 16px);
 
     font-weight: 700;
 
-    letter-spacing: 2.5px;
+    width: fit-content;
 
-    margin-bottom: 8px;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
 }
 
 
-/* COURSE ASSIGNMENT */
+a.github-btn:link,
+a.github-btn:visited {
+    color: #0b3b91;
 
-.projects-area h2 {
-    color: white;
+    text-decoration: none;
+}
 
-    font-size: clamp(34px, 3vw, 48px);
+
+a.github-btn:hover {
+    color: #0b3b91;
+
+    background: #eaf7ff;
+
+    transform: translateY(-2px);
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   RIGHT SIDE - PROJECTS
+========================================================= */
+
+.projects {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   PROJECT HEADING
+========================================================= */
+
+.projects-heading {
+    margin-bottom: clamp(30px, 3vw, 45px);
+}
+
+
+.projects-heading span {
+    display: block;
+
+    color: #8edcff;
+
+    font-size: clamp(12px, 0.9vw, 15px);
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 7px;
+}
+
+
+/*
+   COURSE ASSIGNMENT
+   Reduced font size as requested.
+*/
+
+.projects-heading h2 {
+    font-size: clamp(30px, 2.6vw, 44px);
 
     line-height: 1.1;
 
-    margin-bottom: 38px;
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
 }
 
 
@@ -354,14 +398,14 @@ nav a:hover {
 ========================================================= */
 
 .project-grid {
-    width: 100%;
-
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: clamp(22px, 2vw, 30px);
+    gap: clamp(25px, 2.5vw, 40px);
+
+    width: 100%;
 }
 
 
@@ -372,13 +416,13 @@ nav a:hover {
 .project-card {
     min-width: 0;
 
-    min-height: clamp(430px, 48vh, 500px);
+    min-height: clamp(420px, 48vh, 500px);
 
-    padding: clamp(28px, 2.2vw, 38px);
+    padding:
+        clamp(28px, 2.2vw, 40px);
 
     border:
-        2px solid
-        rgba(210, 235, 255, 0.60);
+        2px solid rgba(210, 235, 255, 0.62);
 
     border-radius: 24px;
 
@@ -386,8 +430,7 @@ nav a:hover {
         rgba(255, 255, 255, 0.18);
 
     box-shadow:
-        0 20px 45px
-        rgba(0, 0, 0, 0.12);
+        0 20px 45px rgba(0, 0, 0, 0.12);
 
     display: flex;
 
@@ -395,19 +438,15 @@ nav a:hover {
 
     transition:
         transform 0.25s ease,
-        background 0.25s ease,
-        box-shadow 0.25s ease;
+        background 0.25s ease;
 }
+
 
 .project-card:hover {
     transform: translateY(-5px);
 
     background:
         rgba(255, 255, 255, 0.22);
-
-    box-shadow:
-        0 25px 55px
-        rgba(0, 0, 0, 0.18);
 }
 
 
@@ -416,15 +455,17 @@ nav a:hover {
 ========================================================= */
 
 .project-number {
-    color: #82d5ff;
+    color: #81ddff;
 
-    font-size: clamp(12px, 0.85vw, 15px);
+    font-size: clamp(12px, 0.9vw, 15px);
 
     font-weight: 700;
 
     letter-spacing: 2px;
 
-    margin-bottom: 28px;
+    line-height: 1.4;
+
+    margin-bottom: clamp(30px, 2.5vw, 42px);
 }
 
 
@@ -435,11 +476,13 @@ nav a:hover {
 .project-card h3 {
     color: white;
 
-    font-size: clamp(23px, 1.7vw, 30px);
+    font-size: clamp(23px, 1.75vw, 31px);
 
     line-height: 1.2;
 
-    margin-bottom: 28px;
+    margin-bottom: clamp(28px, 2.5vw, 40px);
+
+    font-weight: 700;
 }
 
 
@@ -450,20 +493,29 @@ nav a:hover {
 .project-card > p {
     color: #edf6ff;
 
-    font-size: clamp(14px, 0.95vw, 17px);
+    font-size: clamp(14px, 1vw, 17px);
 
     line-height: 1.65;
+
+    margin: 0;
 }
 
 
 /* =========================================================
-   CARD LINKS
+   CARD BOTTOM LINKS
 ========================================================= */
 
 .card-links {
+    /*
+       This is what pushes the links
+       to the bottom of every card.
+    */
+
     margin-top: auto;
 
     padding-top: 30px;
+
+    width: 100%;
 
     display: flex;
 
@@ -471,25 +523,24 @@ nav a:hover {
 
     justify-content: space-between;
 
-    gap: 20px;
+    gap: 15px;
 }
 
 
 /* EXPLORE PROJECT */
 
 .project-link {
-    color: #71d3ff;
+    color: #70d4ff;
 
-    font-size: clamp(13px, 0.9vw, 16px);
+    font-size: clamp(13px, 0.95vw, 16px);
 
     font-weight: 700;
 
     text-decoration: none;
 
     white-space: nowrap;
-
-    transition: color 0.2s ease;
 }
+
 
 a.project-link:hover {
     color: white;
@@ -499,6 +550,8 @@ a.project-link:hover {
 /* COMING SOON */
 
 .project-link.disabled {
+    color: #70d4ff;
+
     opacity: 0.42;
 
     cursor: default;
@@ -508,11 +561,9 @@ a.project-link:hover {
 /* DATASET */
 
 .dataset-link {
-    margin-left: auto;
-
     color: white;
 
-    font-size: clamp(13px, 0.9vw, 16px);
+    font-size: clamp(13px, 0.95vw, 16px);
 
     font-weight: 700;
 
@@ -520,93 +571,42 @@ a.project-link:hover {
 
     white-space: nowrap;
 
-    transition:
-        color 0.2s ease,
-        transform 0.2s ease;
+    margin-left: auto;
 }
+
+
+.dataset-link:visited {
+    color: white;
+}
+
 
 .dataset-link:hover {
     color: #8edcff;
-
-    transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   FOOTER
+   MEDIUM SCREEN
 ========================================================= */
 
-footer {
-    background: #06163d;
-
-    color: #b8c8e5;
-
-    text-align: center;
-
-    padding: 22px;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   MEDIUM LAPTOP
-========================================================= */
-
-@media (max-width: 1350px) {
+@media (max-width: 1200px) {
 
     .hero-content {
-        gap: 35px;
+        grid-template-columns:
+            minmax(0, 0.9fr)
+            minmax(0, 1.1fr);
+
+        gap: 45px;
     }
 
     .hero h1 {
-        font-size: clamp(40px, 3.3vw, 50px);
+        font-size: clamp(34px, 3.5vw, 48px);
     }
 
     .project-card {
         padding: 28px;
     }
 
-    .projects-area h2 {
-        font-size: 38px;
-    }
-
-    .project-card h3 {
-        font-size: 24px;
-    }
-}
-
-
-/* =========================================================
-   SMALL LAPTOP / TABLET LANDSCAPE
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .hero-content {
-        width: 90%;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        gap: 70px;
-    }
-
-    .hero-text,
-    .projects-area {
-        width: 100%;
-    }
-
-    .hero h1 {
-        font-size: clamp(44px, 6vw, 60px);
-
-        white-space: normal;
-    }
-
-    .project-card {
-        min-height: 430px;
-    }
 }
 
 
@@ -614,36 +614,43 @@ footer {
    TABLET
 ========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
 
     nav {
-        width: 90%;
+        width: 94%;
     }
 
-    .brand img {
-        width: 68px;
-        height: 68px;
+    .brand-text strong,
+    .brand-text span {
+        white-space: normal;
     }
 
-    .university {
-        font-size: 16px;
-    }
 
-    .faculty {
-        font-size: 14px;
-    }
+    .hero-content {
+        width: 92%;
 
-    nav ul {
-        gap: 20px;
-    }
-
-    .project-grid {
         grid-template-columns: 1fr;
+
+        padding-top: 60px;
+
+        gap: 80px;
     }
+
+
+    .hero h1 {
+        font-size: clamp(38px, 6vw, 55px);
+    }
+
+
+    .projects-heading {
+        text-align: left;
+    }
+
 
     .project-card {
-        min-height: 390px;
+        min-height: 430px;
     }
+
 }
 
 
@@ -651,78 +658,83 @@ footer {
    MOBILE
 ========================================================= */
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
     nav {
-        padding-top: 18px;
+        width: 92%;
+
+        padding-top: 20px;
+
+        align-items: flex-start;
     }
+
+
+    .brand img {
+        width: 65px;
+        height: 65px;
+    }
+
+
+    .brand-text strong {
+        font-size: 14px;
+    }
+
+
+    .brand-text span {
+        font-size: 12px;
+    }
+
 
     nav ul {
         display: none;
     }
 
-    .brand {
-        gap: 13px;
-    }
-
-    .brand img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .university {
-        font-size: 15px;
-    }
-
-    .faculty {
-        font-size: 13px;
-    }
 
     .hero-content {
         width: 90%;
 
-        padding-top: 35px;
-        padding-bottom: 60px;
+        padding-top: 50px;
 
-        gap: 60px;
+        gap: 70px;
     }
+
 
     .tag {
-        font-size: 12px;
+        letter-spacing: 2px;
     }
+
 
     .hero h1 {
-        font-size: clamp(36px, 10vw, 48px);
+        /*
+           <br> still controls the intended three-line title.
+        */
 
-        line-height: 1.08;
+        font-size: clamp(31px, 8.5vw, 42px);
 
-        white-space: normal;
+        line-height: 1.12;
 
-        margin-bottom: 40px;
+        margin-bottom: 45px;
     }
 
-    .course-details,
-    .student-details {
-        font-size: 15px;
+
+    .project-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
     }
 
-    .github-btn {
-        width: 100%;
-    }
-
-    .projects-area h2 {
-        font-size: 35px;
-    }
 
     .project-card {
-        padding: 28px 25px;
+        min-height: 400px;
 
-        min-height: 380px;
+        padding: 30px;
     }
 
-    .project-card h3 {
-        font-size: 25px;
+
+    .projects-heading h2 {
+        font-size: 32px;
     }
+
 }
 
 
@@ -730,27 +742,39 @@ footer {
    VERY SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
 
-    .brand img {
-        width: 52px;
-        height: 52px;
-    }
-
-    .brand-text {
-        max-width: 245px;
-    }
-
-    .hero h1 {
-        font-size: 35px;
-    }
-
-    .card-links {
+    .brand {
         gap: 12px;
     }
+
+
+    .brand img {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+
+    .project-card {
+        min-height: 380px;
+
+        padding: 25px;
+    }
+
+
+    .card-links {
+        gap: 10px;
+    }
+
 
     .project-link,
     .dataset-link {
         font-size: 13px;
     }
+
 }
