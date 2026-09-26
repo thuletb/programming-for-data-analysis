@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Programming Foundation for Data Analytics and Visualization</title>
+    <title>Programming Foundation for Data Analysis and Visualization</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,74 +15,99 @@
 
 <body>
 
-<!-- ==================================================
+<!-- =====================================================
      HERO
-================================================== -->
+===================================================== -->
 
 <header class="hero" id="home">
 
-    <!-- NAVIGATION -->
+
+    <!-- ================= NAVIGATION ================= -->
+
     <nav>
 
-        <div class="brand">
+        <div class="nav-right">
+
+            <ul>
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://github.com/thuletb/programming-for-data-analysis"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- BK LOGO -->
 
             <img
+                class="nav-logo"
                 src="Images/bk-logo.png"
                 alt="HCMUT Logo"
             >
 
-            <span>
-                Ho Chi Minh City University of Technology – VNU-HCM
-            </span>
-
         </div>
-
-
-        <ul>
-
-            <li>
-                <a href="#home">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="#projects">
-                    Projects
-                </a>
-            </li>
-
-            <li>
-                <a
-                    href="https://github.com/thuletb/programming-for-data-analysis"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GitHub
-                </a>
-            </li>
-
-        </ul>
 
     </nav>
 
 
-    <!-- HERO CONTENT -->
+
+    <!-- ================= MAIN CONTENT ================= -->
 
     <div class="hero-content">
 
 
-        <!-- ================= LEFT SIDE ================= -->
+        <!-- =================================================
+             LEFT COLUMN
+        ================================================== -->
 
         <div class="hero-text">
+
+
+            <!-- UNIVERSITY -->
+
+            <div class="university-info">
+
+                <p class="university-name">
+                    Ho Chi Minh City University of Technology – VNU-HCM
+                </p>
+
+                <p class="faculty-name">
+                    Faculty of Computer Science and Engineering
+                </p>
+
+            </div>
+
+
+            <!-- COURSE LABEL -->
 
             <p class="tag">
                 COURSE ASSIGNMENT · SEMESTER 261
             </p>
 
+
+            <!-- COURSE TITLE -->
+
             <h1>
                 Programming Foundation for<br>
-                Data Analysis and <br>
+                Data Analysis and<br>
                 Visualization
             </h1>
 
@@ -92,22 +117,12 @@
             <div class="course-details">
 
                 <p>
-                    Ho Chi Minh City University of Technology – VNU-HCM
-                </p>
-
-                <p>
-                    Faculty of Computer Science and Engineering
-                </p>
-
-                <p>
                     Semester 261 - Academic year: 2026-2027
                 </p>
 
                 <p>
                     Instructor:
-                    <strong>
-                        Le Thanh Sach
-                    </strong>
+                    <strong>Le Thanh Sach</strong>
                 </p>
 
             </div>
@@ -121,6 +136,7 @@
                     <strong>Group:</strong>
                     tbc
                 </p>
+
                 <p>
                     <strong>Student:</strong>
                     LE THI BAO THU
@@ -134,6 +150,8 @@
             </div>
 
 
+            <!-- REPOSITORY -->
+
             <a
                 class="btn"
                 href="https://github.com/thuletb/programming-for-data-analysis"
@@ -146,10 +164,15 @@
         </div>
 
 
-        <!-- ================= RIGHT SIDE ================= -->
+
+        <!-- =================================================
+             RIGHT COLUMN - PROJECTS
+        ================================================== -->
 
         <div class="hero-projects" id="projects">
 
+
+            <!-- PROJECT HEADING -->
 
             <div class="projects-heading">
 
@@ -164,93 +187,126 @@
             </div>
 
 
+
+            <!-- ================= PROJECT GRID ================= -->
+
             <div class="hero-project-grid">
 
-    <!-- PROJECT 01 -->
-    <div class="hero-project-card">
 
-        <span class="project-number">
-            PROJECT 01 · TABULAR
-        </span>
+                <!-- =============================================
+                     PROJECT 01
+                ============================================== -->
 
-        <h3>Stroke Risk Prediction</h3>
+                <div class="hero-project-card">
 
-        <p>
-            Predicting stroke risk from demographic,
-            lifestyle, and health-related data using
-            machine learning.
-        </p>
+                    <span class="project-number">
+                        PROJECT 01 · TABULAR
+                    </span>
 
-        <div class="project-actions">
 
-            <a class="hero-project-link"
-               href="tabular.html">
-                Explore Project →
-            </a>
+                    <h3>
+                        Stroke Risk Prediction
+                    </h3>
 
-            <a class="dataset-link"
-               href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset"
-               target="_blank"
-               rel="noopener noreferrer">
-                Dataset ↗
-            </a>
+
+                    <p>
+                        Predicting stroke risk from demographic,
+                        lifestyle, and health-related data using
+                        machine learning.
+                    </p>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            class="hero-project-link"
+                            href="tabular.html"
+                        >
+                            Explore Project →
+                        </a>
+
+
+                        <a
+                            class="dataset-link"
+                            href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Dataset ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     PROJECT 02
+                ============================================== -->
+
+                <div class="hero-project-card">
+
+                    <span class="project-number">
+                        PROJECT 02 · TIME SERIES
+                    </span>
+
+
+                    <h3>
+                        Household Energy Consumption Forecasting
+                    </h3>
+
+
+                    <p>
+                        Time-series analysis and machine learning
+                        for forecasting household electricity
+                        consumption using historical power usage
+                        data.
+                    </p>
+
+
+                    <div class="project-actions">
+
+                        <a
+                            class="hero-project-link"
+                            href="timeseries.html"
+                        >
+                            Explore Project →
+                        </a>
+
+
+                        <a
+                            class="dataset-link"
+                            href="https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Dataset ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
 
         </div>
 
     </div>
-
-
-    <!-- PROJECT 02 -->
-    <div class="hero-project-card">
-
-        <span class="project-number">
-            PROJECT 02 · TIME SERIES
-        </span>
-
-        <h3>
-            Household Energy Consumption Forecasting
-        </h3>
-
-        <p>
-            Time-series analysis and machine learning
-            for forecasting household electricity
-            consumption using historical power usage data.
-        </p>
-
-        <div class="project-actions">
-
-            <a class="hero-project-link"
-               href="timeseries.html">
-                Explore Project →
-            </a>
-
-            <a class="dataset-link"
-               href="https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption"
-               target="_blank"
-               rel="noopener noreferrer">
-                Dataset ↗
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
 
 </header>
 
 
 
-<!-- ==================================================
+<!-- =====================================================
      FOOTER
-================================================== -->
+===================================================== -->
 
 <footer>
 
     <p>
-        © 2026 Programming for Data Analysis & Visualization
+        © 2026 Programming Foundation for Data Analysis and Visualization
     </p>
 
     <p class="footer-subtitle">
