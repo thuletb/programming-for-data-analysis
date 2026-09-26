@@ -649,3 +649,48 @@ footer {
         font-size: 22px;
     }
 }
+
+/* =========================================================
+   PROJECT ACTIONS
+========================================================= */
+
+.project-actions {
+    margin-top: auto;
+    padding-top: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.project-actions .hero-project-link {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.dataset-link {
+    display: inline-block;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    transition: 0.2s;
+}
+
+.dataset-link:hover {
+    background: white;
+    color: #0b3b91;
+
+    transform: translateY(-2px);
+}
