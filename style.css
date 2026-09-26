@@ -1,3 +1,7 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,16 +14,17 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #1f2937;
     background: #ffffff;
+    color: #ffffff;
 }
 
-/* ===== HERO ===== */
 
-/* ===== HERO ===== */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
-    min-height: 720px;
+    min-height: 100vh;
 
     background:
         linear-gradient(
@@ -32,288 +37,512 @@ body {
     color: white;
 }
 
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
 nav {
-    max-width: 1180px;
-    margin: auto;
-    padding: 25px 30px;
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 24px 55px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+
+/* Logo + University name */
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
 
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
+    gap: 14px;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
 }
 
 .brand img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
+
     object-fit: contain;
 }
 
+
+/* Navigation menu */
+
 nav ul {
     display: flex;
+
     list-style: none;
-    gap: 35px;
+
+    gap: 38px;
 }
 
 nav a {
     color: white;
+
     text-decoration: none;
+
     font-size: 15px;
+    font-weight: 500;
+
+    transition: opacity 0.2s;
 }
 
 nav a:hover {
-    opacity: 0.75;
+    opacity: 0.7;
 }
 
 
-/* ===== HERO CONTENT ===== */
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .hero-content {
-    max-width: 1180px;
-    margin: auto;
+    width: 100%;
+    max-width: 1500px;
 
-    padding: 65px 30px 100px;
+    margin: 0 auto;
+
+    padding:
+        65px
+        55px
+        90px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
+    gap: 65px;
 }
+
+
+/* =========================================================
+   LEFT SIDE
+========================================================= */
 
 .hero-text {
-    width: 62%;
+    width: 44%;
+    flex-shrink: 0;
 }
+
+
+/* Small heading */
 
 .tag {
-    color: #8ed5ff;
+    color: #86d5ff;
 
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 700;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
 
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
+
+
+/* Main title */
 
 .hero h1 {
-    font-size: 55px;
+    font-size: 54px;
+
     line-height: 1.08;
 
-    margin-bottom: 30px;
+    letter-spacing: -1px;
+
+    margin-bottom: 36px;
+
+    color: white;
 }
+
+
+/* =========================================================
+   COURSE INFORMATION
+========================================================= */
 
 .course-details {
     color: #dbeafe;
 
-    font-size: 16px;
+    font-size: 15px;
+
     line-height: 1.8;
 
-    margin-bottom: 22px;
+    margin-bottom: 25px;
 }
 
 .course-details strong {
     color: white;
 }
 
+
+/* =========================================================
+   STUDENT INFORMATION
+========================================================= */
+
 .student-details {
-    border-left: 3px solid #48b8f0;
+    border-left: 3px solid #38bdf8;
 
     padding-left: 18px;
 
     margin-top: 20px;
 
-    line-height: 1.8;
-
     color: #eaf6ff;
+
+    font-size: 15px;
+
+    line-height: 1.8;
 }
 
 .student-details strong {
     color: white;
 }
 
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
 .btn {
     display: inline-block;
 
     margin-top: 30px;
 
-    padding: 14px 28px;
+    padding: 14px 25px;
 
     border-radius: 7px;
 
     background: white;
     color: #0b3b91;
 
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 700;
+
     text-decoration: none;
 
-    transition: 0.25s;
+    transition:
+        transform 0.25s,
+        background 0.25s,
+        box-shadow 0.25s;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    background: #e8f5ff;
+
+    background: #eaf6ff;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.15);
 }
 
 
-/* ===== BK LOGO ===== */
+/* =========================================================
+   RIGHT SIDE — COURSE PROJECTS
+========================================================= */
 
-.hero-logo {
-    width: 34%;
+.hero-projects {
+    width: 52%;
+}
+
+
+/* Project heading */
+
+.projects-heading {
+    margin-bottom: 24px;
+}
+
+.projects-label {
+    color: #86d5ff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    margin-bottom: 8px;
+}
+
+.hero-projects h2 {
+    color: white;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
+.hero-project-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.hero-project-card {
+    min-height: 315px;
+
+    padding: 30px 27px;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+
+    background:
+        rgba(255, 255, 255, 0.11);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 18px 40px
+        rgba(0, 0, 0, 0.12);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.25s,
+        background 0.25s,
+        box-shadow 0.25s;
 }
 
-.hero-logo img {
-    width: 330px;
-    max-width: 100%;
 
-    object-fit: contain;
+/* Hover effect */
 
-    filter: drop-shadow(
-        0 20px 30px rgba(0, 0, 0, 0.22)
-    );
-}
-/* ===== GENERAL SECTION ===== */
-
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 90px 30px;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title span {
-    color: #6253c5;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.section-title h2 {
-    font-size: 38px;
-    margin-top: 10px;
-}
-
-/* ===== PROJECTS ===== */
-
-.projects {
-    background: #f7f7fb;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.project-card {
-    background: white;
-    padding: 35px;
-
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
-
-    transition: 0.25s;
-}
-
-.project-card:hover {
+.hero-project-card:hover {
     transform: translateY(-6px);
+
+    background:
+        rgba(255, 255, 255, 0.17);
+
+    box-shadow:
+        0 22px 45px
+        rgba(0, 0, 0, 0.18);
 }
+
+
+/* PROJECT 01 / PROJECT 02 */
 
 .project-number {
-    color: #6253c5;
-    font-weight: bold;
+    color: #7dd3fc;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* Project title */
+
+.hero-project-card h3 {
+    color: white;
+
+    font-size: 24px;
+
+    line-height: 1.25;
+
+    margin:
+        18px
+        0
+        16px;
+}
+
+
+/* Project description */
+
+.hero-project-card p {
+    color: #dbeafe;
+
     font-size: 14px;
-}
 
-.project-card h3 {
-    margin: 15px 0;
-    font-size: 25px;
-}
-
-.project-card p {
-    color: #6b7280;
     line-height: 1.7;
 }
 
-.project-link {
+
+/* =========================================================
+   PROJECT LINK
+========================================================= */
+
+.hero-project-link {
     display: inline-block;
-    margin-top: 25px;
 
-    color: #6253c5;
-    font-weight: bold;
-    text-decoration: none;
-}
+    margin-top: auto;
+    padding-top: 28px;
 
-/* ===== COURSE ===== */
-
-.course-info {
-    text-align: center;
-    line-height: 2;
-}
-
-.course-info strong {
-    color: #27215c;
-}
-
-/* ===== STUDENT ===== */
-
-.student {
-    background: #27215c;
     color: white;
-    text-align: center;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s,
+        transform 0.2s;
 }
 
-.student h2 {
-    font-size: 35px;
-    margin-bottom: 25px;
+a.hero-project-link:hover {
+    color: #7dd3fc;
+
+    transform: translateX(4px);
 }
 
-.student p {
-    margin: 10px 0;
-    color: #dedcff;
+
+/* Coming Soon */
+
+.coming-soon {
+    color: #93c5fd;
+
+    cursor: default;
 }
 
-.student a {
-    color: #ffca58;
-}
 
-/* ===== FOOTER ===== */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 footer {
-    background: #1d1949;
-    color: #aaa5d6;
+    background: #041536;
+
+    color: #a9c7e8;
 
     text-align: center;
-    padding: 25px;
+
+    padding: 22px 20px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
 }
 
-/* ===== MOBILE ===== */
+.footer-subtitle {
+    color: #7398c3;
+
+    font-size: 12px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    nav {
+        padding:
+            22px
+            30px;
+    }
+
+    .brand span {
+        font-size: 14px;
+    }
+
+    .hero-content {
+        padding:
+            50px
+            30px
+            80px;
+
+        gap: 40px;
+    }
+
+    .hero-text {
+        width: 43%;
+    }
+
+    .hero-projects {
+        width: 54%;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-project-card {
+        min-height: 230px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 800px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        padding:
+            20px
+            22px;
+    }
+
+    .brand img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand span {
+        font-size: 12px;
+
+        max-width: 230px;
+    }
 
     nav ul {
         display: none;
     }
 
+
+    /* Hero */
+
     .hero-content {
         flex-direction: column;
-        text-align: center;
-        padding-top: 50px;
+
+        align-items: stretch;
+
+        padding:
+            45px
+            22px
+            65px;
+
+        gap: 65px;
     }
 
     .hero-text {
@@ -322,14 +551,49 @@ footer {
 
     .hero h1 {
         font-size: 40px;
+
+        letter-spacing: -0.5px;
     }
 
-    .hero-graphic {
+
+    /* Projects */
+
+    .hero-projects {
         width: 100%;
-        margin-top: 60px;
     }
 
-    .project-grid {
+    .hero-projects h2 {
+        font-size: 29px;
+    }
+
+    .hero-project-grid {
         grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .hero-project-card {
+        min-height: 260px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .course-details,
+    .student-details {
+        font-size: 14px;
+    }
+
+    .hero-project-card {
+        padding: 25px 22px;
     }
 }
