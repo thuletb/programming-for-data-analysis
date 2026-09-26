@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL RESET
+   RESET
 ========================================================= */
 
 * {
@@ -8,23 +8,15 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
-
-    background: #071f56;
+    background: #0b3b91;
 }
-
 
 
 /* =========================================================
@@ -32,13 +24,6 @@ body {
 ========================================================= */
 
 .hero {
-
-    /*
-       Không đặt height cố định.
-       Nếu nội dung dài hơn màn hình,
-       trang vẫn tự mở rộng.
-    */
-
     min-height: 100vh;
 
     background:
@@ -49,34 +34,25 @@ body {
             #168bd2 100%
         );
 
-    overflow: hidden;
+    color: white;
 }
-
 
 
 /* =========================================================
    NAVIGATION
 ========================================================= */
 
-.navbar {
-
+nav {
     width: min(94%, 1600px);
-
     margin: 0 auto;
 
-    padding:
-        clamp(18px, 2vw, 30px)
-        0;
+    min-height: 120px;
+    padding: 18px 0;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
-    gap: 30px;
 }
-
 
 
 /* =========================================================
@@ -84,240 +60,140 @@ body {
 ========================================================= */
 
 .brand {
-
     display: flex;
-
     align-items: center;
 
-    gap: clamp(12px, 1.5vw, 20px);
+    gap: clamp(16px, 1.5vw, 26px);
 
     min-width: 0;
 }
 
 
-.brand-logo {
+/* LOGO - LARGER */
 
-    /*
-       Logo tự co theo màn hình.
-    */
-
-    width: clamp(52px, 4.5vw, 78px);
-
+.brand img {
+    width: clamp(90px, 7vw, 125px);
     height: auto;
 
-    flex-shrink: 0;
-
     object-fit: contain;
+    flex-shrink: 0;
 }
 
+
+/* SCHOOL INFORMATION */
 
 .brand-text {
-
     display: flex;
-
     flex-direction: column;
 
-    gap: 5px;
-
-    min-width: 0;
-}
-
-
-.university {
-
-    font-size:
-        clamp(
-            15px,
-            1.25vw,
-            21px
-        );
-
-    font-weight: 700;
+    gap: 6px;
 
     line-height: 1.25;
 }
 
 
-.faculty {
-
-    color: #dbeafe;
-
-    font-size:
-        clamp(
-            12px,
-            1vw,
-            16px
-        );
-
-    line-height: 1.3;
+.brand-text .university {
+    font-size: clamp(16px, 1.25vw, 22px);
+    font-weight: 600;
 }
 
+
+.brand-text .faculty {
+    font-size: clamp(14px, 1.05vw, 18px);
+    font-weight: 400;
+
+    color: #e2ecff;
+}
 
 
 /* =========================================================
-   NAV MENU
+   NAV LINKS
 ========================================================= */
 
-.nav-menu {
-
+nav ul {
     display: flex;
-
     align-items: center;
-
-    gap: clamp(22px, 3vw, 45px);
 
     list-style: none;
 
-    flex-shrink: 0;
+    gap: clamp(22px, 3vw, 45px);
+
+    margin-left: 30px;
 }
 
 
-.nav-menu a {
-
+nav a {
     color: white;
 
     text-decoration: none;
 
-    font-size:
-        clamp(
-            14px,
-            1vw,
-            17px
-        );
+    font-size: clamp(14px, 1vw, 17px);
 
-    transition: opacity 0.2s;
+    transition: 0.2s;
 }
 
 
-.nav-menu a:hover {
-
-    opacity: 0.7;
+nav a:hover {
+    color: #8ed5ff;
 }
-
 
 
 /* =========================================================
-   MAIN HERO CONTENT
+   HERO CONTENT
 ========================================================= */
 
 .hero-content {
-
-    /*
-       max width nhưng vẫn responsive.
-    */
-
     width: min(94%, 1600px);
-
     margin: 0 auto;
 
     padding:
-        clamp(55px, 7vh, 100px)
+        clamp(50px, 6vh, 90px)
         0
-        clamp(70px, 8vh, 110px);
-
+        clamp(60px, 8vh, 110px);
 
     display: grid;
 
-
-    /*
-       Bên trái nhỏ hơn một chút.
-       Bên phải dành đủ không gian cho 2 card.
-    */
-
     grid-template-columns:
         minmax(360px, 0.85fr)
-        minmax(620px, 1.15fr);
+        minmax(600px, 1.35fr);
 
-
-    gap:
-        clamp(
-            45px,
-            6vw,
-            100px
-        );
-
+    gap: clamp(50px, 6vw, 100px);
 
     align-items: center;
 }
 
 
-
 /* =========================================================
-   LEFT COLUMN
+   LEFT SIDE
 ========================================================= */
 
-.course-column {
-
-    width: 100%;
-
+.hero-text {
     min-width: 0;
 }
 
 
-
-/* =========================================================
-   TAG
-========================================================= */
-
 .tag {
+    color: #8ed5ff;
 
-    color: #82d4ff;
+    font-size: clamp(13px, 1vw, 16px);
 
-    font-size:
-        clamp(
-            12px,
-            1vw,
-            15px
-        );
+    font-weight: bold;
 
-    font-weight: 700;
+    letter-spacing: 2.5px;
 
-    letter-spacing:
-        clamp(
-            1.5px,
-            0.2vw,
-            2.5px
-        );
-
-    margin-bottom:
-        clamp(
-            20px,
-            2.5vw,
-            32px
-        );
+    margin-bottom: 28px;
 }
 
 
+.hero h1 {
+    font-size: clamp(45px, 4.2vw, 72px);
 
-/* =========================================================
-   MAIN TITLE
-========================================================= */
+    line-height: 1.08;
 
-.course-column h1 {
+    margin-bottom: 45px;
 
-    /*
-       clamp giúp chữ tự co.
-    */
-
-    font-size:
-        clamp(
-            44px,
-            4.1vw,
-            68px
-        );
-
-    line-height: 1.06;
-
-    letter-spacing: -1px;
-
-    margin-bottom:
-        clamp(
-            35px,
-            4vw,
-            55px
-        );
+    max-width: 680px;
 }
-
 
 
 /* =========================================================
@@ -325,149 +201,91 @@ body {
 ========================================================= */
 
 .course-details {
+    color: #e4efff;
 
-    color: #dbeafe;
+    font-size: clamp(15px, 1.05vw, 18px);
 
-    font-size:
-        clamp(
-            14px,
-            1.1vw,
-            17px
-        );
+    line-height: 1.75;
 
-    line-height: 1.7;
-
-    margin-bottom: 22px;
+    margin-bottom: 26px;
 }
 
 
 .course-details p {
-
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 
 .course-details strong {
-
     color: white;
 }
 
 
-
 /* =========================================================
-   STUDENT INFORMATION
+   STUDENT DETAILS
 ========================================================= */
 
 .student-details {
+    border-left: 4px solid #48b8f0;
 
-    border-left:
-        3px solid #48b8f0;
+    padding-left: 20px;
 
-    padding:
-        6px
-        0
-        6px
-        clamp(
-            14px,
-            1.5vw,
-            20px
-        );
-
-    margin-top: 22px;
+    margin-top: 25px;
 
     color: #eaf6ff;
 
-    font-size:
-        clamp(
-            14px,
-            1.05vw,
-            17px
-        );
+    font-size: clamp(15px, 1.05vw, 18px);
 
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
 
 .student-details p {
-
     margin: 2px 0;
 }
 
 
 .student-details strong {
-
     color: white;
 }
-
 
 
 /* =========================================================
    GITHUB BUTTON
 ========================================================= */
 
-.github-btn {
-
+.btn {
     display: inline-block;
 
-    margin-top:
-        clamp(
-            24px,
-            3vw,
-            35px
-        );
+    margin-top: 32px;
 
-    padding:
-        clamp(
-            12px,
-            1vw,
-            15px
-        )
-        clamp(
-            20px,
-            2vw,
-            30px
-        );
+    padding: 15px 30px;
+
+    border-radius: 8px;
 
     background: white;
 
     color: #0b3b91;
 
-    font-size:
-        clamp(
-            14px,
-            1vw,
-            16px
-        );
+    font-size: clamp(14px, 1vw, 17px);
 
-    font-weight: 700;
+    font-weight: bold;
 
     text-decoration: none;
 
-    border-radius: 8px;
-
-    box-shadow:
-        0 8px 20px
-        rgba(0, 0, 0, 0.15);
-
-    transition:
-        transform 0.25s,
-        background 0.25s,
-        box-shadow 0.25s;
+    transition: 0.25s;
 }
 
 
-.github-btn:hover {
+.btn:hover {
+    transform: translateY(-3px);
 
     background: #e8f5ff;
 
-    transform:
-        translateY(-3px);
-
     box-shadow:
-        0 12px 26px
-        rgba(0, 0, 0, 0.20);
+        0 10px 25px
+        rgba(0, 0, 0, 0.18);
 }
-
 
 
 /* =========================================================
@@ -475,66 +293,37 @@ body {
 ========================================================= */
 
 .projects-area {
-
-    width: 100%;
-
-    max-width: 850px;
-
     min-width: 0;
-
-    justify-self: center;
 }
 
 
-
-/* =========================================================
-   PROJECT HEADING
-========================================================= */
-
 .projects-heading {
-
-    margin-bottom:
-        clamp(
-            25px,
-            3vw,
-            38px
-        );
+    margin-bottom: 32px;
 }
 
 
 .projects-heading span {
+    display: block;
 
-    color: #82d4ff;
+    color: #8ed5ff;
 
-    font-size:
-        clamp(
-            12px,
-            1vw,
-            15px
-        );
+    font-size: clamp(13px, 1vw, 16px);
 
-    font-weight: 700;
+    font-weight: bold;
 
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
+
+    margin-bottom: 8px;
 }
 
 
 .projects-heading h2 {
-
     color: white;
 
-    margin-top: 8px;
-
-    font-size:
-        clamp(
-            32px,
-            3vw,
-            44px
-        );
+    font-size: clamp(34px, 3vw, 48px);
 
     line-height: 1.1;
 }
-
 
 
 /* =========================================================
@@ -542,25 +331,13 @@ body {
 ========================================================= */
 
 .project-grid {
-
-    width: 100%;
-
     display: grid;
 
     grid-template-columns:
-        repeat(
-            2,
-            minmax(0, 1fr)
-        );
+        repeat(2, minmax(0, 1fr));
 
-    gap:
-        clamp(
-            22px,
-            2.5vw,
-            34px
-        );
+    gap: clamp(24px, 2.5vw, 40px);
 }
-
 
 
 /* =========================================================
@@ -568,280 +345,154 @@ body {
 ========================================================= */
 
 .project-card {
-
     min-width: 0;
 
-
-    /*
-       Không dùng height cố định.
-       min-height để 2 card vẫn cân đối.
-    */
-
-    min-height:
-        clamp(
-            390px,
-            47vh,
-            490px
-        );
-
+    min-height: clamp(410px, 52vh, 520px);
 
     padding:
-        clamp(
-            28px,
-            3vw,
-            42px
-        );
+        clamp(32px, 3vw, 48px);
 
-
-    border-radius:
-        clamp(
-            18px,
-            2vw,
-            25px
-        );
-
+    display: flex;
+    flex-direction: column;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(255, 255, 255, 0.20),
-            rgba(255, 255, 255, 0.13)
-        );
-
+        rgba(255, 255, 255, 0.17);
 
     border:
         2px solid
-        rgba(
-            205,
-            230,
-            255,
-            0.55
-        );
+        rgba(190, 220, 255, 0.70);
 
+    border-radius: 25px;
 
     box-shadow:
-        0 16px 35px
-        rgba(
-            0,
-            0,
-            0,
-            0.15
-        );
+        0 20px 40px
+        rgba(0, 0, 0, 0.14);
 
+    backdrop-filter: blur(5px);
 
-    display: flex;
-
-    flex-direction: column;
-
-
-    transition:
-        transform 0.25s,
-        box-shadow 0.25s;
+    transition: 0.25s;
 }
 
 
 .project-card:hover {
+    transform: translateY(-6px);
 
-    transform:
-        translateY(-5px);
+    background:
+        rgba(255, 255, 255, 0.21);
 
     box-shadow:
-        0 22px 45px
-        rgba(
-            0,
-            0,
-            0,
-            0.20
-        );
+        0 25px 50px
+        rgba(0, 0, 0, 0.20);
 }
 
 
-
 /* =========================================================
-   PROJECT NUMBER
+   PROJECT CONTENT
 ========================================================= */
 
 .project-number {
+    color: #83d6ff;
 
-    display: block;
+    font-size: clamp(13px, 1vw, 16px);
 
-    color: #7dd7ff;
+    font-weight: bold;
 
-    font-size:
-        clamp(
-            12px,
-            1vw,
-            15px
-        );
+    letter-spacing: 2px;
 
-    font-weight: 700;
-
-    letter-spacing:
-        clamp(
-            1.2px,
-            0.15vw,
-            2px
-        );
-
-    margin-bottom:
-        clamp(
-            25px,
-            2.5vw,
-            34px
-        );
+    margin-bottom: 28px;
 }
 
-
-
-/* =========================================================
-   PROJECT TITLE
-========================================================= */
 
 .project-card h3 {
-
     color: white;
 
-    font-size:
-        clamp(
-            23px,
-            2vw,
-            30px
-        );
+    font-size: clamp(25px, 2vw, 34px);
 
-    line-height: 1.25;
+    line-height: 1.15;
 
-    margin-bottom:
-        clamp(
-            24px,
-            2.5vw,
-            32px
-        );
+    margin-bottom: 30px;
 }
 
 
+.project-card p {
+    color: #e6f1ff;
 
-/* =========================================================
-   PROJECT DESCRIPTION
-========================================================= */
-
-.project-description {
-
-    color: #e4efff;
-
-    font-size:
-        clamp(
-            14px,
-            1.05vw,
-            17px
-        );
+    font-size: clamp(15px, 1.05vw, 18px);
 
     line-height: 1.65;
+
+    max-width: 95%;
 }
 
 
-
 /* =========================================================
-   PROJECT ACTIONS
+   PROJECT LINKS
 ========================================================= */
 
 .project-actions {
-
-    /*
-       Luôn đẩy các link xuống cuối card.
-    */
-
     margin-top: auto;
 
-    padding-top: 30px;
+    padding-top: 35px;
 
     display: flex;
 
-    align-items: center;
-
     justify-content: space-between;
 
-    gap: 18px;
+    align-items: center;
+
+    gap: 20px;
 }
 
 
-
-/* =========================================================
-   EXPLORE PROJECT
-========================================================= */
-
 .project-link {
+    color: #76d5ff;
 
-    color: #79d6ff;
+    font-size: clamp(15px, 1.1vw, 18px);
 
-    font-size:
-        clamp(
-            14px,
-            1vw,
-            17px
-        );
-
-    font-weight: 700;
+    font-weight: bold;
 
     text-decoration: none;
 
     white-space: nowrap;
 
-    transition: color 0.2s;
+    transition: 0.2s;
 }
 
 
-a.project-link:hover {
-
+.project-link:hover {
     color: white;
 }
 
 
-.project-link.disabled {
-
-    opacity: 0.55;
-
-    cursor: default;
-}
-
-
-
-/* =========================================================
-   DATASET LINK
-========================================================= */
-
 .dataset-link {
+    color: white;
+
+    font-size: clamp(15px, 1.1vw, 18px);
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    white-space: nowrap;
 
     margin-left: auto;
 
-    color: white;
-
-    font-size:
-        clamp(
-            14px,
-            1vw,
-            17px
-        );
-
-    font-weight: 700;
-
-    text-decoration: none;
-
-    white-space: nowrap;
-
-    transition:
-        color 0.2s,
-        transform 0.2s;
+    transition: 0.2s;
 }
 
 
 .dataset-link:hover {
-
-    color: #82d4ff;
-
-    transform:
-        translateY(-2px);
+    color: #8ed5ff;
 }
 
+
+/* DISABLED PROJECT LINK */
+
+.disabled {
+    opacity: 0.45;
+
+    pointer-events: none;
+}
 
 
 /* =========================================================
@@ -849,10 +500,9 @@ a.project-link:hover {
 ========================================================= */
 
 footer {
-
     background: #061b4f;
 
-    color: #bcd5ee;
+    color: #bcd3ef;
 
     text-align: center;
 
@@ -862,176 +512,114 @@ footer {
 }
 
 
-
 /* =========================================================
-   SMALL LAPTOP
-   1000px - 1250px
+   LARGE SCREENS
 ========================================================= */
 
-@media (max-width: 1250px) {
+@media (min-width: 1600px) {
+
+    .brand img {
+        width: 125px;
+    }
 
     .hero-content {
+        grid-template-columns:
+            minmax(420px, 0.8fr)
+            minmax(720px, 1.35fr);
+    }
+}
 
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    nav {
+        min-height: 105px;
+    }
+
+    .brand img {
+        width: clamp(75px, 8vw, 95px);
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+        padding-top: 50px;
+    }
+
+    .hero-text {
+        max-width: 750px;
+    }
+
+    .projects-area {
+        width: 100%;
+    }
+
+    .project-card {
+        min-height: 430px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 750px) {
+
+    nav {
         width: 92%;
 
-        grid-template-columns:
-            minmax(330px, 0.8fr)
-            minmax(540px, 1.2fr);
+        min-height: auto;
 
-        gap: 40px;
+        padding: 18px 0;
     }
 
-
-    .projects-area {
-
-        max-width: 720px;
+    .brand {
+        gap: 12px;
     }
 
-
-    .project-card {
-
-        padding: 28px;
-    }
-}
-
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1000px) {
-
-    .hero-content {
-
-        display: block;
-
-        width: min(90%, 850px);
-
-        padding-top: 55px;
+    .brand img {
+        width: 70px;
     }
 
-
-    .course-column {
-
-        max-width: 700px;
-
-        margin: 0 auto;
+    .brand-text .university {
+        font-size: 14px;
     }
 
-
-    .projects-area {
-
-        width: 100%;
-
-        max-width: 850px;
-
-        margin:
-            clamp(
-                70px,
-                9vw,
-                100px
-            )
-            auto
-            0;
+    .brand-text .faculty {
+        font-size: 12px;
     }
 
-
-    .projects-heading {
-
-        text-align: left;
-    }
-
-
-    .project-grid {
-
-        grid-template-columns:
-            repeat(
-                2,
-                minmax(0, 1fr)
-            );
-    }
-
-
-    .project-card {
-
-        min-height: 420px;
-    }
-}
-
-
-
-/* =========================================================
-   MOBILE / SMALL TABLET
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .navbar {
-
-        width: 90%;
-    }
-
-
-    /*
-       Hide menu on small screens.
-    */
-
-    .nav-menu {
-
+    nav ul {
         display: none;
     }
 
-
-    .brand {
-
-        width: 100%;
-    }
-
-
-    .brand-logo {
-
-        width: 55px;
-    }
-
-
     .hero-content {
-
-        width: 88%;
+        width: 92%;
 
         padding-top: 45px;
+
+        gap: 60px;
     }
 
-
-    .course-column h1 {
-
-        font-size:
-            clamp(
-                38px,
-                10vw,
-                50px
-            );
+    .hero h1 {
+        font-size: clamp(40px, 11vw, 55px);
     }
-
-
-    /*
-       Cards become one column.
-    */
 
     .project-grid {
-
         grid-template-columns: 1fr;
-
-        gap: 25px;
     }
 
-
     .project-card {
-
         min-height: 390px;
     }
 }
-
 
 
 /* =========================================================
@@ -1040,81 +628,32 @@ footer {
 
 @media (max-width: 480px) {
 
-    .navbar {
-
-        width: 88%;
+    .brand img {
+        width: 60px;
     }
 
-
-    .brand-text {
-
-        gap: 3px;
+    .brand-text .university {
+        font-size: 12px;
     }
 
-
-    .university {
-
-        font-size: 13px;
-    }
-
-
-    .faculty {
-
+    .brand-text .faculty {
         font-size: 11px;
     }
 
-
-    .brand-logo {
-
-        width: 48px;
+    .hero h1 {
+        font-size: 38px;
     }
-
-
-    .hero-content {
-
-        width: 86%;
-    }
-
-
-    .tag {
-
-        line-height: 1.6;
-    }
-
-
-    .course-column h1 {
-
-        font-size:
-            clamp(
-                34px,
-                10vw,
-                42px
-            );
-    }
-
 
     .project-card {
-
-        min-height: 370px;
-
-        padding: 27px 23px;
+        padding: 28px 24px;
     }
 
-
-    /*
-       Nếu màn hình quá hẹp,
-       hai link vẫn không đè lên nhau.
-    */
-
     .project-actions {
-
         gap: 12px;
     }
 
-
     .project-link,
     .dataset-link {
-
-        font-size: 13px;
+        font-size: 14px;
     }
 }
