@@ -7,7 +7,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Programming Foundation for Data Analysis and Visualization</title>
+    <title>
+        Programming Foundation for Data Analysis and Visualization
+    </title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,33 +17,31 @@
 
 <body>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <header class="hero" id="home">
 
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
-    <!-- ================= NAVIGATION ================= -->
+    <nav class="navbar">
 
-    <nav>
-
-        <!-- Logo + University information -->
+        <!-- Logo + University -->
 
         <div class="brand">
 
             <img
                 src="Images/bk-logo.png"
                 alt="HCMUT Logo"
+                class="brand-logo"
             >
 
             <div class="brand-text">
 
-                <div class="brand-university">
+                <div class="university">
                     Ho Chi Minh City University of Technology – VNU-HCM
                 </div>
 
-                <div class="brand-faculty">
+                <div class="faculty">
                     Faculty of Computer Science and Engineering
                 </div>
 
@@ -50,9 +50,9 @@
         </div>
 
 
-        <!-- Navigation links -->
+        <!-- Menu -->
 
-        <ul>
+        <ul class="nav-menu">
 
             <li>
                 <a href="#home">
@@ -82,16 +82,18 @@
 
 
 
-    <!-- ================= MAIN HERO ================= -->
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
 
-    <div class="hero-content">
+    <main class="hero-content">
 
 
         <!-- =================================================
-             LEFT SIDE
-        ================================================= -->
+             LEFT COLUMN
+        ================================================== -->
 
-        <div class="hero-text">
+        <section class="course-column">
 
             <p class="tag">
                 COURSE ASSIGNMENT · SEMESTER 261
@@ -106,7 +108,7 @@
             </h1>
 
 
-            <!-- Course information -->
+            <!-- Course Information -->
 
             <div class="course-details">
 
@@ -122,7 +124,7 @@
             </div>
 
 
-            <!-- Student information -->
+            <!-- Student Information -->
 
             <div class="student-details">
 
@@ -136,18 +138,13 @@
                     LE THI BAO THU - 2680021
                 </p>
 
-                <!-- <p>
-                    <strong>Student ID:</strong>
-                    2680021
-                </p> -->
-
             </div>
 
 
-            <!-- GitHub button -->
+            <!-- GitHub Button -->
 
             <a
-                class="github-button"
+                class="github-btn"
                 href="https://github.com/thuletb/programming-for-data-analysis"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -155,16 +152,18 @@
                 View GitHub Repository
             </a>
 
-        </div>
+        </section>
 
 
 
         <!-- =================================================
-             RIGHT SIDE - PROJECTS
-        ================================================= -->
+             RIGHT COLUMN
+        ================================================== -->
 
-        <div class="projects-area" id="projects">
+        <section class="projects-area" id="projects">
 
+
+            <!-- Heading -->
 
             <div class="projects-heading">
 
@@ -180,37 +179,35 @@
 
 
 
-            <!-- PROJECT GRID -->
+            <!-- =============================================
+                 PROJECT GRID
+            ============================================== -->
 
             <div class="project-grid">
 
 
-                <!-- ================= PROJECT 01 ================= -->
+                <!-- =========================================
+                     PROJECT 01
+                ========================================== -->
 
-                <div class="project-card">
+                <article class="project-card">
 
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            PROJECT 01 · TABULAR
-                        </span>
-
-
-                        <h3>
-                            Stroke Risk Prediction
-                        </h3>
+                    <span class="project-number">
+                        PROJECT 01 · TABULAR
+                    </span>
 
 
-                        <p>
-                            Predicting stroke risk from demographic,
-                            lifestyle, and health-related data using
-                            machine learning.
-                        </p>
-
-                    </div>
+                    <h3>
+                        Stroke Risk Prediction
+                    </h3>
 
 
-                    <!-- Project links -->
+                    <p class="project-description">
+                        Predicting stroke risk from demographic,
+                        lifestyle, and health-related data using
+                        machine learning.
+                    </p>
+
 
                     <div class="project-actions">
 
@@ -221,8 +218,6 @@
                             Explore Project →
                         </a>
 
-
-                        <!-- Replace this URL with your dataset URL if needed -->
 
                         <a
                             class="dataset-link"
@@ -235,43 +230,38 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
 
-                <!-- ================= PROJECT 02 ================= -->
+                <!-- =========================================
+                     PROJECT 02
+                ========================================== -->
 
-                <div class="project-card">
+                <article class="project-card">
 
-                    <div class="project-content">
-
-                        <span class="project-number">
-                            PROJECT 02 · TIME SERIES
-                        </span>
-
-
-                        <h3>
-                            Household Energy<br>
-                            Consumption Forecasting
-                        </h3>
+                    <span class="project-number">
+                        PROJECT 02 · TIME SERIES
+                    </span>
 
 
-                        <p>
-                            Time-series analysis and machine learning
-                            for forecasting household electricity
-                            consumption using historical power usage
-                            data.
-                        </p>
-
-                    </div>
+                    <h3>
+                        Household Energy Consumption Forecasting
+                    </h3>
 
 
-                    <!-- Project links -->
+                    <p class="project-description">
+                        Time-series analysis and machine learning
+                        for forecasting household electricity
+                        consumption using historical power usage
+                        data.
+                    </p>
+
 
                     <div class="project-actions">
 
                         <span class="project-link disabled">
-                            Explore Project →
+                            Coming Soon
                         </span>
 
 
@@ -286,22 +276,22 @@
 
                     </div>
 
-                </div>
+                </article>
 
 
             </div>
 
-        </div>
+        </section>
 
-    </div>
+    </main>
 
 </header>
 
 
 
-<!-- =====================================================
+<!-- =========================================================
      FOOTER
-===================================================== -->
+========================================================== -->
 
 <footer>
 
