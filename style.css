@@ -15,12 +15,12 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
-    background: #0b3b91;
+    background: #071d50;
 }
 
 
 /* =========================================================
-   HERO
+   HERO / MAIN PAGE
 ========================================================= */
 
 .hero {
@@ -35,6 +35,9 @@ body {
         );
 
     color: white;
+
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -46,41 +49,39 @@ nav {
     width: min(94%, 1600px);
     margin: 0 auto;
 
-    min-height: 120px;
-    padding: 18px 0;
+    padding: 24px 0;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
 }
 
 
-/* =========================================================
-   BRAND
-========================================================= */
+/* ===== UNIVERSITY BRAND ===== */
 
 .brand {
     display: flex;
     align-items: center;
 
-    gap: clamp(16px, 1.5vw, 26px);
-
-    min-width: 0;
+    gap: 20px;
 }
 
 
-/* LOGO - LARGER */
+/* BK LOGO */
 
 .brand img {
-    width: clamp(90px, 7vw, 125px);
-    height: auto;
+    width: clamp(72px, 5vw, 92px);
+    height: clamp(72px, 5vw, 92px);
 
     object-fit: contain;
+
     flex-shrink: 0;
 }
 
 
-/* SCHOOL INFORMATION */
+/* UNIVERSITY TEXT */
 
 .brand-text {
     display: flex;
@@ -91,36 +92,31 @@ nav {
     line-height: 1.25;
 }
 
-
-.brand-text .university {
-    font-size: clamp(16px, 1.25vw, 22px);
-    font-weight: 600;
+.university {
+    font-size: clamp(17px, 1.35vw, 23px);
+    font-weight: 700;
 }
 
-
-.brand-text .faculty {
+.faculty {
     font-size: clamp(14px, 1.05vw, 18px);
     font-weight: 400;
 
-    color: #e2ecff;
+    color: #e2edff;
 }
 
 
-/* =========================================================
-   NAV LINKS
-========================================================= */
+/* ===== NAV LINKS ===== */
 
 nav ul {
+    list-style: none;
+
     display: flex;
     align-items: center;
 
-    list-style: none;
+    gap: clamp(25px, 3vw, 45px);
 
-    gap: clamp(22px, 3vw, 45px);
-
-    margin-left: 30px;
+    flex-shrink: 0;
 }
-
 
 nav a {
     color: white;
@@ -129,35 +125,40 @@ nav a {
 
     font-size: clamp(14px, 1vw, 17px);
 
-    transition: 0.2s;
+    transition: opacity 0.2s ease;
 }
 
-
 nav a:hover {
-    color: #8ed5ff;
+    opacity: 0.7;
 }
 
 
 /* =========================================================
-   HERO CONTENT
+   MAIN CONTENT
 ========================================================= */
 
 .hero-content {
     width: min(94%, 1600px);
-    margin: 0 auto;
+
+    margin: auto;
 
     padding:
-        clamp(50px, 6vh, 90px)
+        clamp(40px, 5vh, 70px)
         0
-        clamp(60px, 8vh, 110px);
+        clamp(50px, 7vh, 90px);
 
     display: grid;
 
-    grid-template-columns:
-        minmax(360px, 0.85fr)
-        minmax(600px, 1.35fr);
+    /*
+       LEFT SIDE IS WIDER.
+       This allows the course title to remain 3 lines.
+    */
 
-    gap: clamp(50px, 6vw, 100px);
+    grid-template-columns:
+        minmax(600px, 1.08fr)
+        minmax(650px, 1fr);
+
+    gap: clamp(45px, 5vw, 90px);
 
     align-items: center;
 }
@@ -172,27 +173,45 @@ nav a:hover {
 }
 
 
+/* COURSE ASSIGNMENT */
+
 .tag {
-    color: #8ed5ff;
+    color: #82d5ff;
 
     font-size: clamp(13px, 1vw, 16px);
 
-    font-weight: bold;
+    font-weight: 700;
 
     letter-spacing: 2.5px;
 
-    margin-bottom: 28px;
+    margin-bottom: clamp(25px, 3vh, 38px);
 }
 
 
+/* COURSE TITLE */
+
 .hero h1 {
-    font-size: clamp(45px, 4.2vw, 72px);
+    /*
+       clamp prevents title from becoming too large
+       on smaller laptop screens.
+    */
+
+    font-size: clamp(48px, 4vw, 68px);
 
     line-height: 1.08;
 
-    margin-bottom: 45px;
+    font-weight: 700;
 
-    max-width: 680px;
+    letter-spacing: -1.5px;
+
+    margin-bottom: clamp(45px, 6vh, 70px);
+
+    /*
+       HTML controls line breaking using <br>.
+       Browser should NOT create additional line breaks.
+    */
+
+    white-space: nowrap;
 }
 
 
@@ -201,20 +220,18 @@ nav a:hover {
 ========================================================= */
 
 .course-details {
-    color: #e4efff;
+    color: #e3efff;
 
     font-size: clamp(15px, 1.05vw, 18px);
 
-    line-height: 1.75;
+    line-height: 1.8;
 
-    margin-bottom: 26px;
+    margin-bottom: 24px;
 }
-
 
 .course-details p {
-    margin-bottom: 3px;
+    margin-bottom: 4px;
 }
-
 
 .course-details strong {
     color: white;
@@ -222,28 +239,26 @@ nav a:hover {
 
 
 /* =========================================================
-   STUDENT DETAILS
+   STUDENT INFORMATION
 ========================================================= */
 
 .student-details {
-    border-left: 4px solid #48b8f0;
+    margin-top: 24px;
+
+    border-left: 4px solid #48c4ff;
 
     padding-left: 20px;
 
-    margin-top: 25px;
-
-    color: #eaf6ff;
+    color: #edf7ff;
 
     font-size: clamp(15px, 1.05vw, 18px);
 
     line-height: 1.8;
 }
 
-
 .student-details p {
     margin: 2px 0;
 }
-
 
 .student-details strong {
     color: white;
@@ -254,75 +269,92 @@ nav a:hover {
    GITHUB BUTTON
 ========================================================= */
 
-.btn {
-    display: inline-block;
+.github-btn {
+    display: inline-flex;
 
-    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
 
-    padding: 15px 30px;
+    margin-top: 28px;
 
-    border-radius: 8px;
+    padding: 15px 28px;
 
     background: white;
 
     color: #0b3b91;
 
-    font-size: clamp(14px, 1vw, 17px);
-
-    font-weight: bold;
+    border-radius: 8px;
 
     text-decoration: none;
 
-    transition: 0.25s;
-}
+    font-size: 16px;
 
-
-.btn:hover {
-    transform: translateY(-3px);
-
-    background: #e8f5ff;
+    font-weight: 700;
 
     box-shadow:
-        0 10px 25px
+        0 8px 20px
+        rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.github-btn:hover {
+    transform: translateY(-3px);
+
+    background: #eaf7ff;
+
+    box-shadow:
+        0 12px 26px
         rgba(0, 0, 0, 0.18);
 }
 
 
 /* =========================================================
-   PROJECT AREA
+   RIGHT SIDE — PROJECT AREA
 ========================================================= */
 
 .projects-area {
-    min-width: 0;
+    width: 100%;
+
+    /*
+       IMPORTANT:
+       Keeps the two cards narrower.
+    */
+
+    max-width: 820px;
+
+    justify-self: end;
 }
 
 
-.projects-heading {
-    margin-bottom: 32px;
-}
+/* MY WORK */
 
-
-.projects-heading span {
-    display: block;
-
-    color: #8ed5ff;
+.projects-label {
+    color: #82d5ff;
 
     font-size: clamp(13px, 1vw, 16px);
 
-    font-weight: bold;
+    font-weight: 700;
 
     letter-spacing: 2.5px;
 
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 
-.projects-heading h2 {
-    color: white;
+/* COURSE ASSIGNMENT */
 
+.projects-area h2 {
     font-size: clamp(34px, 3vw, 48px);
 
     line-height: 1.1;
+
+    margin-bottom: 38px;
+
+    color: white;
 }
 
 
@@ -331,12 +363,14 @@ nav a:hover {
 ========================================================= */
 
 .project-grid {
+    width: 100%;
+
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: clamp(24px, 2.5vw, 40px);
+    gap: clamp(22px, 2vw, 30px);
 }
 
 
@@ -347,55 +381,56 @@ nav a:hover {
 .project-card {
     min-width: 0;
 
-    min-height: clamp(410px, 52vh, 520px);
+    min-height: clamp(430px, 48vh, 510px);
 
     padding:
-        clamp(32px, 3vw, 48px);
-
-    display: flex;
-    flex-direction: column;
-
-    background:
-        rgba(255, 255, 255, 0.17);
+        clamp(32px, 2.5vw, 44px);
 
     border:
         2px solid
-        rgba(190, 220, 255, 0.70);
+        rgba(210, 235, 255, 0.60);
 
-    border-radius: 25px;
+    border-radius: 24px;
+
+    background:
+        rgba(255, 255, 255, 0.18);
 
     box-shadow:
-        0 20px 40px
-        rgba(0, 0, 0, 0.14);
+        0 20px 45px
+        rgba(0, 0, 0, 0.12);
 
-    backdrop-filter: blur(5px);
+    display: flex;
 
-    transition: 0.25s;
+    flex-direction: column;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
 }
-
 
 .project-card:hover {
     transform: translateY(-6px);
 
     background:
-        rgba(255, 255, 255, 0.21);
+        rgba(255, 255, 255, 0.22);
 
     box-shadow:
-        0 25px 50px
-        rgba(0, 0, 0, 0.20);
+        0 25px 55px
+        rgba(0, 0, 0, 0.18);
 }
 
 
 /* =========================================================
-   PROJECT CONTENT
+   PROJECT NUMBER
 ========================================================= */
 
 .project-number {
-    color: #83d6ff;
+    color: #82d5ff;
 
-    font-size: clamp(13px, 1vw, 16px);
+    font-size: clamp(12px, 0.9vw, 15px);
 
-    font-weight: bold;
+    font-weight: 700;
 
     letter-spacing: 2px;
 
@@ -403,95 +438,109 @@ nav a:hover {
 }
 
 
+/* =========================================================
+   PROJECT TITLE
+========================================================= */
+
 .project-card h3 {
     color: white;
 
-    font-size: clamp(25px, 2vw, 34px);
+    font-size: clamp(24px, 1.8vw, 31px);
 
-    line-height: 1.15;
+    line-height: 1.18;
 
     margin-bottom: 30px;
 }
 
 
-.project-card p {
-    color: #e6f1ff;
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
 
-    font-size: clamp(15px, 1.05vw, 18px);
+.project-card > p {
+    color: #edf6ff;
+
+    font-size: clamp(14px, 1vw, 17px);
 
     line-height: 1.65;
-
-    max-width: 95%;
 }
 
 
 /* =========================================================
-   PROJECT LINKS
+   CARD LINKS
 ========================================================= */
 
-.project-actions {
+.card-links {
     margin-top: auto;
 
     padding-top: 35px;
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    justify-content: space-between;
 
     gap: 20px;
 }
 
 
+/* EXPLORE PROJECT */
+
 .project-link {
-    color: #76d5ff;
+    color: #71d3ff;
 
-    font-size: clamp(15px, 1.1vw, 18px);
+    font-size: clamp(14px, 1vw, 17px);
 
-    font-weight: bold;
+    font-weight: 700;
 
     text-decoration: none;
 
     white-space: nowrap;
 
-    transition: 0.2s;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
-
-.project-link:hover {
+a.project-link:hover {
     color: white;
 }
 
+
+/* DISABLED PROJECT */
+
+.project-link.disabled {
+    opacity: 0.42;
+
+    cursor: default;
+}
+
+
+/* DATASET */
 
 .dataset-link {
+    margin-left: auto;
+
     color: white;
 
-    font-size: clamp(15px, 1.1vw, 18px);
+    font-size: clamp(14px, 1vw, 17px);
 
-    font-weight: bold;
+    font-weight: 700;
 
     text-decoration: none;
 
     white-space: nowrap;
 
-    margin-left: auto;
-
-    transition: 0.2s;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
-
 
 .dataset-link:hover {
-    color: #8ed5ff;
-}
+    color: #8edcff;
 
-
-/* DISABLED PROJECT LINK */
-
-.disabled {
-    opacity: 0.45;
-
-    pointer-events: none;
+    transform: translateY(-2px);
 }
 
 
@@ -500,9 +549,9 @@ nav a:hover {
 ========================================================= */
 
 footer {
-    background: #061b4f;
+    background: #06163d;
 
-    color: #bcd3ef;
+    color: #b8c8e5;
 
     text-align: center;
 
@@ -513,38 +562,47 @@ footer {
 
 
 /* =========================================================
-   LARGE SCREENS
+   LARGE / MEDIUM LAPTOP
+   Example: 1280px – 1450px
 ========================================================= */
 
-@media (min-width: 1600px) {
-
-    .brand img {
-        width: 125px;
-    }
+@media (max-width: 1450px) {
 
     .hero-content {
         grid-template-columns:
-            minmax(420px, 0.8fr)
-            minmax(720px, 1.35fr);
+            minmax(540px, 1.05fr)
+            minmax(590px, 1fr);
+
+        gap: 45px;
+    }
+
+    .projects-area {
+        max-width: 760px;
+    }
+
+    .project-card {
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: clamp(45px, 4vw, 58px);
     }
 }
 
 
 /* =========================================================
-   TABLET / SMALL LAPTOP
+   SMALL LAPTOP / TABLET LANDSCAPE
 ========================================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
 
     nav {
-        min-height: 105px;
-    }
-
-    .brand img {
-        width: clamp(75px, 8vw, 95px);
+        width: min(92%, 1000px);
     }
 
     .hero-content {
+        width: min(92%, 1000px);
+
         grid-template-columns: 1fr;
 
         gap: 70px;
@@ -553,15 +611,71 @@ footer {
     }
 
     .hero-text {
-        max-width: 750px;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 6vw, 64px);
     }
 
     .projects-area {
         width: 100%;
+
+        max-width: none;
+
+        justify-self: stretch;
     }
 
     .project-card {
-        min-height: 430px;
+        min-height: 440px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    nav {
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .brand img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .university {
+        font-size: 16px;
+    }
+
+    .faculty {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        /*
+           At this screen width we allow normal wrapping
+           to prevent horizontal overflow.
+        */
+
+        white-space: normal;
+
+        font-size: clamp(42px, 7vw, 58px);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        min-height: 400px;
     }
 }
 
@@ -570,54 +684,84 @@ footer {
    MOBILE
 ========================================================= */
 
-@media (max-width: 750px) {
+@media (max-width: 650px) {
 
     nav {
-        width: 92%;
+        width: 90%;
 
-        min-height: auto;
+        padding-top: 18px;
 
-        padding: 18px 0;
-    }
-
-    .brand {
-        gap: 12px;
-    }
-
-    .brand img {
-        width: 70px;
-    }
-
-    .brand-text .university {
-        font-size: 14px;
-    }
-
-    .brand-text .faculty {
-        font-size: 12px;
+        align-items: center;
     }
 
     nav ul {
         display: none;
     }
 
-    .hero-content {
-        width: 92%;
+    .brand {
+        gap: 14px;
+    }
 
-        padding-top: 45px;
+    .brand img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .university {
+        font-size: 15px;
+    }
+
+    .faculty {
+        font-size: 13px;
+    }
+
+    .hero-content {
+        width: 90%;
+
+        padding-top: 40px;
 
         gap: 60px;
     }
 
-    .hero h1 {
-        font-size: clamp(40px, 11vw, 55px);
+    .tag {
+        font-size: 12px;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
+    .hero h1 {
+        font-size: clamp(38px, 11vw, 52px);
+
+        white-space: normal;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 40px;
+    }
+
+    .course-details,
+    .student-details {
+        font-size: 15px;
+    }
+
+    .github-btn {
+        width: 100%;
+    }
+
+    .projects-area h2 {
+        font-size: 36px;
     }
 
     .project-card {
         min-height: 390px;
+
+        padding: 30px 26px;
+    }
+
+    .project-card h3 {
+        font-size: 26px;
+    }
+
+    .card-links {
+        gap: 15px;
     }
 }
 
@@ -626,34 +770,30 @@ footer {
    VERY SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 420px) {
+
+    .brand-text {
+        max-width: 240px;
+    }
 
     .brand img {
-        width: 60px;
-    }
-
-    .brand-text .university {
-        font-size: 12px;
-    }
-
-    .brand-text .faculty {
-        font-size: 11px;
+        width: 55px;
+        height: 55px;
     }
 
     .hero h1 {
-        font-size: 38px;
+        font-size: 37px;
     }
 
     .project-card {
-        padding: 28px 24px;
+        min-height: 380px;
     }
 
-    .project-actions {
-        gap: 12px;
+    .card-links {
+        flex-wrap: wrap;
     }
 
-    .project-link,
     .dataset-link {
-        font-size: 14px;
+        margin-left: 0;
     }
 }
