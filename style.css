@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #ffffff;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    min-height: 650px;
+    background: linear-gradient(135deg, #27215c, #5546b7);
+    color: white;
+}
+
+nav {
+    max-width: 1150px;
+    margin: auto;
+    padding: 28px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    opacity: 0.75;
+}
+
+/* ===== HERO CONTENT ===== */
+
+.hero-content {
+    max-width: 1150px;
+    margin: auto;
+    padding: 80px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.tag {
+    color: #c7c2ff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #dedcff;
+    max-width: 600px;
+}
+
+.semester {
+    margin-top: 20px;
+    color: #c7c2ff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 32px;
+
+    padding: 14px 28px;
+    border-radius: 7px;
+
+    background: #ffca58;
+    color: #27215c;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    transition: 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== HERO GRAPHIC ===== */
+
+.hero-graphic {
+    width: 38%;
+    display: flex;
+    justify-content: center;
+}
+
+.data-card {
+    width: 330px;
+    height: 330px;
+
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(8px);
+}
+
+.chart {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+
+    height: 150px;
+}
+
+.bar {
+    width: 35px;
+    background: #ffca58;
+    border-radius: 6px 6px 0 0;
+}
+
+.bar1 { height: 55px; }
+.bar2 { height: 100px; }
+.bar3 { height: 75px; }
+.bar4 { height: 135px; }
+
+.data-card p {
+    margin-top: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ===== GENERAL SECTION ===== */
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 90px 30px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #6253c5;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+/* ===== PROJECTS ===== */
+
+.projects {
+    background: #f7f7fb;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: white;
+    padding: 35px;
+
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+
+    transition: 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+.project-number {
+    color: #6253c5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.project-card h3 {
+    margin: 15px 0;
+    font-size: 25px;
+}
+
+.project-card p {
+    color: #6b7280;
+    line-height: 1.7;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: #6253c5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* ===== COURSE ===== */
+
+.course-info {
+    text-align: center;
+    line-height: 2;
+}
+
+.course-info strong {
+    color: #27215c;
+}
+
+/* ===== STUDENT ===== */
+
+.student {
+    background: #27215c;
+    color: white;
+    text-align: center;
+}
+
+.student h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.student p {
+    margin: 10px 0;
+    color: #dedcff;
+}
+
+.student a {
+    color: #ffca58;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #1d1949;
+    color: #aaa5d6;
+
+    text-align: center;
+    padding: 25px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 800px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-graphic {
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
