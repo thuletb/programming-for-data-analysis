@@ -7,9 +7,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Programming Foundation for Data Analysis and Visualization
-    </title>
+    <title>Programming Foundation for Data Analysis and Visualization</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -17,23 +15,23 @@
 
 <body>
 
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <header class="hero" id="home">
 
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
 
-    <nav class="navbar">
+    <!-- ================= NAVIGATION ================= -->
 
-        <!-- Logo + University -->
+    <nav>
+
+        <!-- Logo + University Information -->
 
         <div class="brand">
 
-            <img
-                src="Images/bk-logo.png"
-                alt="HCMUT Logo"
-                class="brand-logo"
-            >
+            <img src="Images/bk-logo.png"
+                 alt="HCMUT Logo">
 
             <div class="brand-text">
 
@@ -50,9 +48,9 @@
         </div>
 
 
-        <!-- Menu -->
+        <!-- Navigation Links -->
 
-        <ul class="nav-menu">
+        <ul>
 
             <li>
                 <a href="#home">
@@ -67,10 +65,10 @@
             </li>
 
             <li>
-                <a class="btn"
-                   href="https://github.com/thuletb/programming-for-data-analysis"
-                   target="_blank">
-                    View GitHub Repository
+                <a href="https://github.com/thuletb/programming-for-data-analysis"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
                 </a>
             </li>
 
@@ -79,19 +77,16 @@
     </nav>
 
 
+    <!-- ================= MAIN CONTENT ================= -->
 
-    <!-- =====================================================
-         MAIN CONTENT
-    ====================================================== -->
-
-    <main class="hero-content">
+    <div class="hero-content">
 
 
         <!-- =================================================
              LEFT COLUMN
-        ================================================== -->
+        ================================================= -->
 
-        <section class="course-column">
+        <div class="hero-text">
 
             <p class="tag">
                 COURSE ASSIGNMENT · SEMESTER 261
@@ -99,8 +94,7 @@
 
 
             <h1>
-                Programming<br>
-                Foundation for<br>
+                Programming Foundation for<br>
                 Data Analysis and<br>
                 Visualization
             </h1>
@@ -139,29 +133,30 @@
             </div>
 
 
-            <!-- GitHub Button -->
+            <!-- GitHub Repository Button -->
 
-            <a
-                class="github-btn"
-                href="https://github.com/thuletb/programming-for-data-analysis"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
+            <a class="btn"
+               href="https://github.com/thuletb/programming-for-data-analysis"
+               target="_blank"
+               rel="noopener noreferrer">
+
                 View GitHub Repository
+
             </a>
 
-        </section>
+        </div>
 
 
 
         <!-- =================================================
-             RIGHT COLUMN
-        ================================================== -->
+             RIGHT COLUMN - PROJECTS
+        ================================================= -->
 
-        <section class="projects-area" id="projects">
+        <div class="projects-area"
+             id="projects">
 
 
-            <!-- Heading -->
+            <!-- Project Heading -->
 
             <div class="projects-heading">
 
@@ -177,18 +172,16 @@
 
 
 
-            <!-- =============================================
-                 PROJECT GRID
-            ============================================== -->
+            <!-- ================= PROJECT GRID ================= -->
 
             <div class="project-grid">
 
 
-                <!-- =========================================
+                <!-- =============================================
                      PROJECT 01
-                ========================================== -->
+                ============================================== -->
 
-                <article class="project-card">
+                <div class="project-card">
 
                     <span class="project-number">
                         PROJECT 01 · TABULAR
@@ -200,7 +193,7 @@
                     </h3>
 
 
-                    <p class="project-description">
+                    <p>
                         Predicting stroke risk from demographic,
                         lifestyle, and health-related data using
                         machine learning.
@@ -209,34 +202,38 @@
 
                     <div class="project-actions">
 
-                        <a
-                            class="project-link"
-                            href="tabular.html"
-                        >
+                        <!-- Project Page -->
+
+                        <a class="project-link"
+                           href="tabular.html">
+
                             Explore Project →
+
                         </a>
 
 
-                        <a
-                            class="dataset-link"
-                            href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                        <!-- Dataset -->
+
+                        <a class="dataset-link"
+                           href="https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
                             Dataset ↗
+
                         </a>
 
                     </div>
 
-                </article>
+                </div>
 
 
 
-                <!-- =========================================
+                <!-- =============================================
                      PROJECT 02
-                ========================================== -->
+                ============================================== -->
 
-                <article class="project-card">
+                <div class="project-card">
 
                     <span class="project-number">
                         PROJECT 02 · TIME SERIES
@@ -244,52 +241,58 @@
 
 
                     <h3>
-                        Household Energy Consumption Forecasting
+                        Household Energy
+                        Consumption
+                        Forecasting
                     </h3>
 
 
-                    <p class="project-description">
+                    <p>
                         Time-series analysis and machine learning
                         for forecasting household electricity
-                        consumption using historical power usage
-                        data.
+                        consumption using historical power
+                        usage data.
                     </p>
 
 
                     <div class="project-actions">
+
+                        <!-- Project not available yet -->
 
                         <span class="project-link disabled">
                             Coming Soon
                         </span>
 
 
-                        <a
-                            class="dataset-link"
-                            href="https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
+                        <!-- Dataset -->
+
+                        <a class="dataset-link"
+                           href="https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
                             Dataset ↗
+
                         </a>
 
                     </div>
 
-                </article>
+                </div>
 
 
             </div>
 
-        </section>
+        </div>
 
-    </main>
+    </div>
 
 </header>
 
 
 
-<!-- =========================================================
+<!-- =====================================================
      FOOTER
-========================================================== -->
+===================================================== -->
 
 <footer>
 
